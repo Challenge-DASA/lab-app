@@ -1,0 +1,5 @@
+.titleText {
+    -fx-font-size: 24px;
+    -fx-text-fill: #9b34db;
+    -fx-font-weight: bold;
+}

@@ -1,4 +1,4 @@
-package com.dasa.challenge.labapp.controllers;
+package com.dasa.challenge.labapp.controllers.pages;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

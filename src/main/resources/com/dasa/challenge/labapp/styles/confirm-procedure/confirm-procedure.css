@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-smoothing-type: gray;
+    background-color: #C0E6DE;
+}
+
 .titleText {
     -fx-font-size: 24px;
-    -fx-text-fill: #9b34db;
+    -fx-text-fill: #3450D8;
     -fx-font-weight: bold;
+}
+
+.fieldSearchBar {
+    -fx-border-color: #3450D8;
+    -fx-background-color: NONE;
+}
+
+.labelSearchBar {
+    -fx-text-fill: #8080A7;
+    -fx-font-weight: bold;
+    
 }

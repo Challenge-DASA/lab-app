@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-smoothing-type: gray;
+    background-color: #C0E6DE;
+}
+
 .button {
-    -fx-background-color: #9b34db;
-    -fx-text-fill: white;
+    -fx-background-color: #3450D8;
+    -fx-text-fill: #C0E6DE;
     -fx-font-weight: bold;
     -fx-font-size: 16px;
     -fx-cursor: hand;
@@ -8,6 +16,10 @@
 
 .titleClass {
     -fx-font-size: 24px;
-    -fx-text-fill: #9b34db;
+    -fx-text-fill: #3450D8;
     -fx-font-weight: bold;
+}
+
+VBox {
+    -fx-background-color: #C0E6DE;
 }

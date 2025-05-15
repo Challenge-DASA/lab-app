@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.geometry.Insets?>
+<?import com.dasa.challenge.labapp.controllers.components.SearchBar?>
 <VBox alignment="TOP_LEFT" spacing="20.0">
 
     <padding>
@@ -9,4 +10,6 @@
     </padding>
 
     <Label text="Escolha o procedimento" styleClass="titleText"/>
+
+    <SearchBar />
 </VBox>

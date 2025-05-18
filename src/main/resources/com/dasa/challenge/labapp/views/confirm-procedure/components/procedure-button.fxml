@@ -1,0 +1,4 @@
+<?import javafx.scene.control.Button?>
+
+<fx:root type="Button" xmlns:fx="http://javafx.com/fxml" styleClass="procedureButton" text="Selecionar" alignment="CENTER"
+         fx:id="procedureButton"/>

@@ -20,7 +20,7 @@ public class HomeController {
             Scene scene = welcomeText.getScene();
             Stage stage = (Stage) scene.getWindow();
 
-            SliderSwitch.slide(stage,
+            SliderSwitch.slide(stage, ConfirmProcedureController.class,
                     "/com/dasa/challenge/labapp/views/confirm-procedure/confirm-procedure.fxml",
                     "/com/dasa/challenge/labapp/styles/confirm-procedure/confirm-procedure.css");
         } catch (Exception e) {

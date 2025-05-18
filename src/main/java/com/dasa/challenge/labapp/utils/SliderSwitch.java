@@ -12,11 +12,14 @@ import javafx.util.Duration;
 import java.util.Objects;
 
 public class SliderSwitch {
-    public static void slide(Stage stage, String fxmlPath, String cssPath) {
+    public static <T> void slide(Stage stage, Class<T> controllerClass, String fxmlPath, String cssPath) {
         try {
             new Thread(() -> {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(SliderSwitch.class.getResource(fxmlPath));
+                    T controllerInstance = controllerClass.getDeclaredConstructor().newInstance();
+                    fxmlLoader.setController(controllerInstance);
+                    fxmlLoader.setRoot(controllerInstance);
                     Parent newRoot = fxmlLoader.load();
 
                     javafx.application.Platform.runLater(() -> {

@@ -20,6 +20,6 @@
     -fx-font-weight: bold;
 }
 
-VBox {
+.homeMain {
     -fx-background-color: #C0E6DE;
 }

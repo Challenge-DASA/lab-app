@@ -1,0 +1,1769 @@
+{
+  "procedures": [
+    {
+      "procedureId": "2e231316-df81-4f53-9dd5-be97e2ac1e31",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "fa541452-f578-4b0a-a81a-12673415804a",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 32
+        },
+        {
+          "itemId": "7481549b-9f1c-49eb-9e2e-09fd352f0513",
+          "itemName": "Centrifuge",
+          "itemQuantity": 27
+        },
+        {
+          "itemId": "6a1e060f-72e5-4b4d-9973-25376e1317bf",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 16
+        }
+      ]
+    },
+    {
+      "procedureId": "f108f70d-d126-430c-81a7-644a59ce802f",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "9fcd98f3-3c7f-4a35-bb5e-473225fab100",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 98
+        },
+        {
+          "itemId": "e850a759-b849-4b41-ad59-88759ba30c85",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 87
+        },
+        {
+          "itemId": "04d50e0a-8177-4fb0-81b9-2a3637d67d47",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 21
+        }
+      ]
+    },
+    {
+      "procedureId": "2c7df01a-bde1-42b2-9d87-a44184332363",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "3c617127-b30f-40dc-957e-1f1ed6cdebc6",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 67
+        }
+      ]
+    },
+    {
+      "procedureId": "6b84906d-eebb-4f22-bc56-dcf17236ac09",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "5a15120e-cd79-4ff1-b008-9c64715a866c",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 85
+        },
+        {
+          "itemId": "8a3aedc2-af6a-4131-a3e0-abc169405810",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 98
+        },
+        {
+          "itemId": "6a2dfd3e-44e4-4499-bb2a-8e8617ae3c69",
+          "itemName": "Immunoassay Analyzer",
+          "itemQuantity": 66
+        }
+      ]
+    },
+    {
+      "procedureId": "37cac6e9-ce47-4347-910a-091702d57eed",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "152fdd16-5e31-4700-b3cd-427afaf49ef1",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 25
+        }
+      ]
+    },
+    {
+      "procedureId": "7b5b1833-82ce-4b11-92b5-455fca3c2e01",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "fdab6590-69ee-4d47-9891-5bc4e4dd4af0",
+          "itemName": "Centrifuge",
+          "itemQuantity": 5
+        },
+        {
+          "itemId": "307b9063-9262-4bec-aeae-0a1b1bc632a4",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 57
+        }
+      ]
+    },
+    {
+      "procedureId": "e59d2d36-5206-4786-8b40-90e923950016",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "3055bb3c-2d00-426d-90e8-c9a157474bd7",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 72
+        },
+        {
+          "itemId": "dbeb5217-2bc1-4be6-af69-fd4bad52ac43",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 47
+        },
+        {
+          "itemId": "905b23dc-dd09-4bc9-be70-a4405d70dbfb",
+          "itemName": "Centrifuge",
+          "itemQuantity": 10
+        }
+      ]
+    },
+    {
+      "procedureId": "57b5f98e-39d2-4f69-beee-4c9f66c26a9c",
+      "procedureName": "COVID-19 PCR Test",
+      "procedureDescription": "Detects SARS-CoV-2 genetic material.",
+      "procedureItems": [
+        {
+          "itemId": "0183cd2b-7ae6-4ec0-94bf-86b51f1a458d",
+          "itemName": "Nasopharyngeal Swab",
+          "itemQuantity": 55
+        }
+      ]
+    },
+    {
+      "procedureId": "ec47b881-d03b-4c7b-879f-5167bb0df7b4",
+      "procedureName": "Lipid Panel",
+      "procedureDescription": "Measures cholesterol and triglycerides.",
+      "procedureItems": [
+        {
+          "itemId": "7aa3e70a-e28f-46f4-8567-377f88904dfd",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 82
+        },
+        {
+          "itemId": "e1c75010-80b9-4261-ade9-e9060f5820d7",
+          "itemName": "Lipid Analyzer",
+          "itemQuantity": 39
+        }
+      ]
+    },
+    {
+      "procedureId": "97a4f0af-0d71-4118-bce4-92d7b5f38db3",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "953dcc9c-5c07-42b2-8bda-8f406cd47d65",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 33
+        }
+      ]
+    },
+    {
+      "procedureId": "bb5014d2-a174-4e6e-9a00-178858b6a05a",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "25c9c0e6-e39e-461a-a69e-0791cee8b52a",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 67
+        },
+        {
+          "itemId": "56af55db-fee0-4374-9670-b9bd42df1d34",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 91
+        }
+      ]
+    },
+    {
+      "procedureId": "4446a214-eafe-4da7-85ed-99c7c1ea74c4",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "56d5c131-b5ec-400b-93f5-71022a986b9a",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 57
+        }
+      ]
+    },
+    {
+      "procedureId": "63f1c411-9aec-44b2-b8ea-a185e641e6bb",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "35bee2a8-e65b-456e-98dc-0ca92de0f9da",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 29
+        },
+        {
+          "itemId": "eaf973fb-9063-4e9e-b451-2492b1d86f55",
+          "itemName": "Centrifuge",
+          "itemQuantity": 99
+        }
+      ]
+    },
+    {
+      "procedureId": "d9670f34-4c01-40c3-8ad7-c8d37f23f12f",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "01dc095c-95ad-4d38-b741-8d1b4f5e7736",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 3
+        },
+        {
+          "itemId": "9ef1b501-49fa-4b7a-b0b6-6796518c5fa7",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 27
+        }
+      ]
+    },
+    {
+      "procedureId": "8b3eb291-4fad-4a1f-8427-37f2173b0237",
+      "procedureName": "COVID-19 PCR Test",
+      "procedureDescription": "Detects SARS-CoV-2 genetic material.",
+      "procedureItems": [
+        {
+          "itemId": "fab7f7a1-261e-4714-ba05-3fccc39b52cb",
+          "itemName": "RT-PCR Machine",
+          "itemQuantity": 41
+        },
+        {
+          "itemId": "861b16ba-c512-43ef-b6aa-378a49c4e9de",
+          "itemName": "PCR Reagents",
+          "itemQuantity": 89
+        },
+        {
+          "itemId": "7e2632d3-f983-4700-a425-c1b9c0fb29e8",
+          "itemName": "Nasopharyngeal Swab",
+          "itemQuantity": 5
+        }
+      ]
+    },
+    {
+      "procedureId": "dcf5f780-6dd5-4738-bbc3-5bf2b322a673",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "d7a9352b-d728-4440-aeb4-e7db68013b97",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 56
+        },
+        {
+          "itemId": "727a5f6e-185a-4c1c-be73-36bdd3e69777",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 72
+        }
+      ]
+    },
+    {
+      "procedureId": "cf07f512-9c97-4e4b-83fc-2ae58b11c7f6",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "4292b4b5-fddd-4330-93eb-979226b15ebe",
+          "itemName": "Control Plasma",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "6968086c-5a92-4949-a3a4-523068de526e",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 8
+        },
+        {
+          "itemId": "a92b262d-aaf1-44e0-8ced-5fa9556dd84e",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 91
+        }
+      ]
+    },
+    {
+      "procedureId": "19a7d3cc-d800-4976-8e9e-915bb7474626",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "522d2267-a4b6-4315-83bc-7808cf061b70",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 42
+        }
+      ]
+    },
+    {
+      "procedureId": "a971cce9-6289-425e-a40d-c95975cdf1d6",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "683c9691-da4d-406d-8060-fac194f6adca",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 46
+        },
+        {
+          "itemId": "d481d6f9-c272-4692-8cbe-0ac729f78b82",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 10
+        },
+        {
+          "itemId": "3542b1f2-1947-440a-a910-ac76f154b6f4",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 69
+        }
+      ]
+    },
+    {
+      "procedureId": "9ed2e034-65ac-4f9c-b2ca-cee7a0ef5f1a",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "4aa05406-488b-4deb-8947-72b82657ffda",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 76
+        },
+        {
+          "itemId": "fd7d7204-0708-461e-a660-74cbf8f748b1",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 53
+        }
+      ]
+    },
+    {
+      "procedureId": "081494fc-c39d-427c-b906-0c1772a42d9e",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "2d0c0edf-c501-4b90-bf9c-c96208f47165",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 36
+        },
+        {
+          "itemId": "b391ed79-a7dc-43f1-8245-378cbd8639f8",
+          "itemName": "Incubator",
+          "itemQuantity": 99
+        }
+      ]
+    },
+    {
+      "procedureId": "5e5f4871-d08c-4306-92cb-777cdc6ff6b5",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "bdf3b81f-a93a-4749-aa4c-309604711593",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 48
+        },
+        {
+          "itemId": "89bffaee-fe12-428f-a6a2-360c2da58a75",
+          "itemName": "Incubator",
+          "itemQuantity": 86
+        },
+        {
+          "itemId": "d19cc841-b7a3-4b10-a50d-6c29cc80e532",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 9
+        }
+      ]
+    },
+    {
+      "procedureId": "dcded7fe-8713-4785-9dfd-15405e30b628",
+      "procedureName": "COVID-19 PCR Test",
+      "procedureDescription": "Detects SARS-CoV-2 genetic material.",
+      "procedureItems": [
+        {
+          "itemId": "95593b3f-22d3-46c0-90f1-109d99436f2c",
+          "itemName": "Nasopharyngeal Swab",
+          "itemQuantity": 15
+        },
+        {
+          "itemId": "b6b94bfb-283f-4eb3-8a20-2ba30684cef3",
+          "itemName": "PCR Reagents",
+          "itemQuantity": 22
+        }
+      ]
+    },
+    {
+      "procedureId": "ed29786b-8d52-43f0-a005-3ea7758d3d44",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "3190762b-dee8-4870-9678-b9a57cef4a03",
+          "itemName": "Centrifuge",
+          "itemQuantity": 84
+        },
+        {
+          "itemId": "56ff3298-4eb9-4664-a048-470745f8cc1a",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 5
+        }
+      ]
+    },
+    {
+      "procedureId": "99632cd9-cf34-4be8-b7d1-b345f87fc560",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "a1658396-8e97-43d1-a4ff-3101d7a053e0",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 33
+        },
+        {
+          "itemId": "79c53ea1-b668-4d54-a820-e850b0af010c",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 46
+        }
+      ]
+    },
+    {
+      "procedureId": "04a57195-10c4-4460-a00f-1898ed95a332",
+      "procedureName": "Lipid Panel",
+      "procedureDescription": "Measures cholesterol and triglycerides.",
+      "procedureItems": [
+        {
+          "itemId": "6b15aeab-39d2-41eb-b472-edbfb2032349",
+          "itemName": "Lipid Analyzer",
+          "itemQuantity": 64
+        }
+      ]
+    },
+    {
+      "procedureId": "77e03fc6-fd3f-4574-bb26-44201a06a24e",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "662182bc-a981-4977-a50c-db67984dd4cb",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 99
+        },
+        {
+          "itemId": "a5490762-0e27-437a-a2ee-d35a1ca78869",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 92
+        },
+        {
+          "itemId": "f8c20b19-12d9-4e21-91ce-548c4a7a428d",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 71
+        }
+      ]
+    },
+    {
+      "procedureId": "8c089e9e-3188-4909-90c6-3faf7e0c813f",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "29736868-a6e1-4c73-819a-a61acc460393",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 86
+        },
+        {
+          "itemId": "8a424052-12e6-46a6-a1e3-1260a2f8c3de",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 87
+        },
+        {
+          "itemId": "2630a4f4-699f-4a39-a0f1-f71e1486d6fe",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 42
+        }
+      ]
+    },
+    {
+      "procedureId": "e6af72e6-c046-440c-953c-f55e0a16309b",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "21c9c746-728c-46ab-bba1-d752aa428bd9",
+          "itemName": "Immunoassay Analyzer",
+          "itemQuantity": 46
+        }
+      ]
+    },
+    {
+      "procedureId": "905ea677-3a5d-4019-b4f6-6ef794da5749",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "fed9119e-2110-4c6f-8a44-72f89b8b72fe",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 10
+        }
+      ]
+    },
+    {
+      "procedureId": "5618162e-3833-44e7-aee9-c17e0e041d7f",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "ff278014-dd6f-47be-b52b-96e804fca38e",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 43
+        },
+        {
+          "itemId": "fdbc3921-b9fc-4a16-a569-3bf67d440492",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "81e17504-7786-4c66-9392-5ed7896d37f5",
+      "procedureName": "Lipid Panel",
+      "procedureDescription": "Measures cholesterol and triglycerides.",
+      "procedureItems": [
+        {
+          "itemId": "b0bf2046-da54-49ce-ae9d-4925f646635b",
+          "itemName": "Lipid Analyzer",
+          "itemQuantity": 46
+        },
+        {
+          "itemId": "0b44324b-6f57-4520-b9bc-a476c3cee460",
+          "itemName": "Cholesterol Reagent Kit",
+          "itemQuantity": 86
+        },
+        {
+          "itemId": "acd05d0f-614e-4e46-8ef7-f2c97dec0a1b",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 33
+        }
+      ]
+    },
+    {
+      "procedureId": "11d107a9-4d05-42df-8405-f8f37ec2b397",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "9b475126-e93f-42f8-90d7-6082a31b74cd",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 94
+        }
+      ]
+    },
+    {
+      "procedureId": "e2d78540-e03d-4b44-8551-afe7024394ff",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "29850384-dd01-4527-a4c5-de03b5d848e5",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 13
+        },
+        {
+          "itemId": "f276ab47-6770-4eaa-9d35-7381e0494604",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 11
+        }
+      ]
+    },
+    {
+      "procedureId": "716bafda-9bf3-4389-b88c-4c27e433325c",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "931cc282-e9ca-4e2c-906e-897db03fae62",
+          "itemName": "Hematology Analyzer",
+          "itemQuantity": 25
+        },
+        {
+          "itemId": "b994ef06-54d8-4850-a6d3-44b99efbd00d",
+          "itemName": "Microscope Slides",
+          "itemQuantity": 8
+        }
+      ]
+    },
+    {
+      "procedureId": "962b1075-ae31-47bc-938c-428b740d4491",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "6946813d-c5e3-4c73-8660-e72bd365d84f",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 13
+        },
+        {
+          "itemId": "03c1152c-5613-4c2b-b7ae-427656fa322e",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 59
+        }
+      ]
+    },
+    {
+      "procedureId": "0dee421b-cbbf-49d4-843c-abe3f2491eed",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "1e1e2099-1df9-42bc-90d0-13dfb01c05b5",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 93
+        },
+        {
+          "itemId": "833e8db1-ef6c-43f9-b863-20aeda5426b1",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 36
+        },
+        {
+          "itemId": "12836051-c8a8-4be3-9d0b-899d787f5bcf",
+          "itemName": "Incubator",
+          "itemQuantity": 64
+        }
+      ]
+    },
+    {
+      "procedureId": "0762d683-6cbb-4d72-8f1b-3952a46c6746",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "369aef2b-f75c-43c9-8ea2-31742b7f0812",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 47
+        },
+        {
+          "itemId": "70b72661-ee12-4a2e-8c5e-11dc9634c606",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 84
+        },
+        {
+          "itemId": "cd5041df-72a8-4da9-921d-56c4bcfaa7c6",
+          "itemName": "Control Plasma",
+          "itemQuantity": 38
+        }
+      ]
+    },
+    {
+      "procedureId": "c8111007-1105-4b90-b393-a0396a641d0c",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "e8dee98e-c88d-4f6a-a9f6-3bd590182b8a",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 41
+        }
+      ]
+    },
+    {
+      "procedureId": "a51c9da7-49bd-469e-a515-574cb9ddb403",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "0b5c4414-0bce-4185-b562-a03079b190ac",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 60
+        },
+        {
+          "itemId": "ca716e6f-6e4c-4a82-8b6a-1228d8ba5899",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 95
+        }
+      ]
+    },
+    {
+      "procedureId": "f375d05b-ecea-4379-8516-3e021f30e989",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "0d8b5737-7cc2-4e1b-9203-d2e461d8888d",
+          "itemName": "Incubator",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "22062359-1f33-4850-a687-9879e5cd098a",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "2647c8d4-fb6c-4ab0-8c03-204cafd9cafc",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 86
+        },
+        {
+          "itemId": "3792926b-4850-4f65-8b77-4ec0d5b6af81",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 80
+        },
+        {
+          "itemId": "19a66f0e-ced1-4063-a902-26dd07c022ba",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 95
+        }
+      ]
+    },
+    {
+      "procedureId": "6f2afb2b-136a-452f-9774-cb3dabd1db1e",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "5ceb33bd-1106-43fa-a1e9-9fe09e572e2d",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 10
+        },
+        {
+          "itemId": "70480624-a3fe-40c6-9fe1-18ec482dfd4f",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 66
+        },
+        {
+          "itemId": "a181a1d3-18b2-4201-921d-134289172b76",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 86
+        }
+      ]
+    },
+    {
+      "procedureId": "e862ef37-ae4d-40d9-a2bd-d1d1e1c23325",
+      "procedureName": "Lipid Panel",
+      "procedureDescription": "Measures cholesterol and triglycerides.",
+      "procedureItems": [
+        {
+          "itemId": "544d8224-685a-431d-90f2-43add19b2963",
+          "itemName": "Cholesterol Reagent Kit",
+          "itemQuantity": 94
+        },
+        {
+          "itemId": "2e3faad3-576d-463b-86d7-6c019f503e1b",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 95
+        },
+        {
+          "itemId": "f727d42d-1d5a-4d86-83c1-a903a6758c5d",
+          "itemName": "Lipid Analyzer",
+          "itemQuantity": 46
+        }
+      ]
+    },
+    {
+      "procedureId": "c687b0bf-440b-42be-8c9f-760bcc2a9abf",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "f8a45485-597d-4f88-b5df-ebb8b891764c",
+          "itemName": "Microscope Slides",
+          "itemQuantity": 29
+        },
+        {
+          "itemId": "c9b89bc4-f31a-4a21-a7d8-0aec0b8186c4",
+          "itemName": "Hematology Analyzer",
+          "itemQuantity": 82
+        }
+      ]
+    },
+    {
+      "procedureId": "94083d83-a8a1-4430-849f-124bb5150dd7",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "79c5351f-a1f1-495a-bd66-7d331a007f9c",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 5
+        },
+        {
+          "itemId": "31ff1204-5af1-426d-9a67-1a870fba6853",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 42
+        }
+      ]
+    },
+    {
+      "procedureId": "59d4d9e2-0113-40c7-b011-9e0b96083b23",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "e4fe84a5-fa56-4954-98a5-fc6c6f5a16ae",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 89
+        },
+        {
+          "itemId": "5d5ab57d-1cf4-4579-8331-18b62d4b9ec5",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 76
+        }
+      ]
+    },
+    {
+      "procedureId": "8db005dc-b6b2-4997-ab9e-6eb75bdae9c6",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "5e9aa447-11b6-4ed3-9cc7-ede3748164db",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 71
+        },
+        {
+          "itemId": "17294dec-361f-4dde-8e5d-6310fb0c219a",
+          "itemName": "Immunoassay Analyzer",
+          "itemQuantity": 21
+        },
+        {
+          "itemId": "1b8b2f97-dbb1-4a18-8726-cf980f5ee7a2",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 77
+        }
+      ]
+    },
+    {
+      "procedureId": "17d1e8f6-5d87-4205-83cb-fadb75e759b5",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "bdea07fb-6208-4e35-895d-5f1f171cc43c",
+          "itemName": "Hematology Analyzer",
+          "itemQuantity": 23
+        }
+      ]
+    },
+    {
+      "procedureId": "95e94829-71d7-42bf-98c5-b918a41f2bce",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "c5bf4f8a-b638-4ac5-92f7-3dc5e921b7f5",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 80
+        },
+        {
+          "itemId": "6d6d9f92-30ab-4128-81be-a7d13848d410",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 39
+        },
+        {
+          "itemId": "66e3a0f5-797d-4cf7-9fef-3ab2bc9b1620",
+          "itemName": "Control Plasma",
+          "itemQuantity": 10
+        }
+      ]
+    },
+    {
+      "procedureId": "45f08e92-a5e7-4feb-a565-1b99e6a0331c",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "82507747-9439-4612-a139-b9e7f68c79c7",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 80
+        },
+        {
+          "itemId": "1f341d9d-6f4c-451a-9f42-5acc0837afbb",
+          "itemName": "Control Plasma",
+          "itemQuantity": 38
+        }
+      ]
+    },
+    {
+      "procedureId": "8acd8f89-aa07-457f-99c6-30062561afcb",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "4dbe3e7e-b2f1-4ab0-a76c-56e2efb0d765",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "8782513a-1245-454e-abe6-6f48733781e6",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 38
+        },
+        {
+          "itemId": "f8cf460a-8e60-4423-9c42-7ea5fe614992",
+          "itemName": "Incubator",
+          "itemQuantity": 42
+        }
+      ]
+    },
+    {
+      "procedureId": "3c86595e-5a73-450c-8257-47af64bb5d9c",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "56a630ff-56ba-439f-b3a8-ca862bc32e11",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 94
+        },
+        {
+          "itemId": "1f0af32c-b6d3-44d1-b445-68a36307d48d",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 97
+        },
+        {
+          "itemId": "7d94ddea-7662-466b-9f83-bd6c103a1a6b",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 47
+        }
+      ]
+    },
+    {
+      "procedureId": "5378e969-2ff9-489c-b610-41eb4d52e8be",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "8a54eb48-8f1e-4543-83db-ef5397e1a014",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 58
+        },
+        {
+          "itemId": "71f4b1c6-947c-4f0d-b2c1-7988305b24ef",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 13
+        },
+        {
+          "itemId": "09406a62-fef6-4b3f-972b-76c6d3ac7885",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 92
+        }
+      ]
+    },
+    {
+      "procedureId": "677bd4e0-41a7-46e7-a8ab-fc2d62e14af7",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "c03803b7-d280-4a57-a7bd-61e6f105efb8",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 81
+        },
+        {
+          "itemId": "7443500f-bcd8-4e3e-9030-14bab5dd2628",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 29
+        }
+      ]
+    },
+    {
+      "procedureId": "73d1c493-145a-440c-8b8f-b865f4bacdaf",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "7a15cbf2-a46c-4642-a22a-75d13fa44823",
+          "itemName": "Centrifuge",
+          "itemQuantity": 80
+        },
+        {
+          "itemId": "0f8a8e94-467c-4b69-b6b4-f164e589ddf7",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 76
+        }
+      ]
+    },
+    {
+      "procedureId": "205125f6-2ec1-4e91-8d11-f3789565308e",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "c2353b35-cdb3-4df3-bbc1-b41a67f51752",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 47
+        }
+      ]
+    },
+    {
+      "procedureId": "84051e70-2e38-4ba7-8b49-4383652d825e",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "1888ab47-697a-41ed-9860-b87864f2836d",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 66
+        },
+        {
+          "itemId": "313d999a-e8c5-412f-816a-febc09a0865a",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "5f72b886-43d2-4748-9c81-94e4a23ec879",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 91
+        }
+      ]
+    },
+    {
+      "procedureId": "b01edc1c-86e6-40ba-af90-9d014a458e27",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "95d1ceac-5b8c-4247-aed0-6d891de07159",
+          "itemName": "Incubator",
+          "itemQuantity": 75
+        },
+        {
+          "itemId": "34221e07-e0ae-461b-a9d7-e911f324cd75",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 25
+        },
+        {
+          "itemId": "4a3fdf55-112a-494a-8d63-fe28d67e7088",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 92
+        }
+      ]
+    },
+    {
+      "procedureId": "cf4f1884-7dba-4b54-acb6-4556f0f0a5fd",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "9d41196a-ebea-4e2c-a967-60331953f9bd",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 52
+        },
+        {
+          "itemId": "d031343a-0df2-4501-9a21-20b55da356c7",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 67
+        }
+      ]
+    },
+    {
+      "procedureId": "1a59d30c-3ce8-470c-9c81-c30ff79047e2",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "ba5162d5-d921-4cb2-96ca-717d6993b23f",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 100
+        },
+        {
+          "itemId": "edb0621a-3f6c-4c94-b9a1-f5f05706d5ca",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 87
+        }
+      ]
+    },
+    {
+      "procedureId": "ed52e94a-d892-47e9-964e-61e10414824b",
+      "procedureName": "Lipid Panel",
+      "procedureDescription": "Measures cholesterol and triglycerides.",
+      "procedureItems": [
+        {
+          "itemId": "6ec9bffe-ad4e-4cba-b499-a461db0bd9db",
+          "itemName": "Cholesterol Reagent Kit",
+          "itemQuantity": 50
+        },
+        {
+          "itemId": "34430587-7e2c-4200-a3bf-351351a61ed7",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 79
+        }
+      ]
+    },
+    {
+      "procedureId": "1aeae536-54b7-47aa-8c15-7afb64ce73ad",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "fd5db903-224b-4b09-ac62-b3c29ee71c19",
+          "itemName": "Urine Test Strips",
+          "itemQuantity": 42
+        },
+        {
+          "itemId": "ce773805-b62b-410d-bbcf-2b34dd004a01",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 80
+        }
+      ]
+    },
+    {
+      "procedureId": "d1a81b41-a039-414d-9646-5e17810fe2e2",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "a6058e5e-ed26-4519-a772-0809ba39ff6d",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 8
+        },
+        {
+          "itemId": "82979593-8650-4bf4-86da-d9450c4f34a7",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 9
+        },
+        {
+          "itemId": "477ac46f-84f2-41bd-b80e-f44e6b9dc12e",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 92
+        }
+      ]
+    },
+    {
+      "procedureId": "0cca2ebf-b2aa-4502-92e1-54d8353102cc",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "8ed9265b-a91a-4b61-a539-9db76a2163bd",
+          "itemName": "Incubator",
+          "itemQuantity": 68
+        },
+        {
+          "itemId": "1501d089-58e7-4571-a66e-8368c7d80b95",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 59
+        }
+      ]
+    },
+    {
+      "procedureId": "d1418f66-671e-457a-a752-58b503a47322",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "8cb01083-7406-4d27-9935-ae7269e933c2",
+          "itemName": "Centrifuge",
+          "itemQuantity": 29
+        },
+        {
+          "itemId": "e5f2870e-b280-456b-ad29-42d059c63625",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 54
+        }
+      ]
+    },
+    {
+      "procedureId": "b6a2d2f8-d280-4f00-b2b1-408639c90e8e",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "793938f4-c4b4-4de7-9b97-6811b0870713",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 82
+        },
+        {
+          "itemId": "73138535-13da-45a4-8651-ece07cd1240a",
+          "itemName": "Centrifuge",
+          "itemQuantity": 49
+        },
+        {
+          "itemId": "0336ab93-8767-4ca7-91cd-46420758a095",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 4
+        }
+      ]
+    },
+    {
+      "procedureId": "51c8ee3d-c1bf-48f8-9cb2-271b8888b920",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "f9d718f1-8db2-4ff0-baa0-a298f8555811",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 38
+        }
+      ]
+    },
+    {
+      "procedureId": "03751cd3-f546-4c87-96a3-682c41aea9d9",
+      "procedureName": "COVID-19 PCR Test",
+      "procedureDescription": "Detects SARS-CoV-2 genetic material.",
+      "procedureItems": [
+        {
+          "itemId": "943de8ba-d9f2-47a3-9762-59ec68bddcf8",
+          "itemName": "Nasopharyngeal Swab",
+          "itemQuantity": 33
+        }
+      ]
+    },
+    {
+      "procedureId": "9a7c4885-d2ce-4bf7-bd06-7a3411c9239e",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "44cafad3-71b4-42d1-90d5-88e93b9796b4",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 25
+        },
+        {
+          "itemId": "31370752-16dd-42db-9f69-3dfe1a327371",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 59
+        },
+        {
+          "itemId": "b922951c-7c58-4fc9-b02d-2bce7e0e3546",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 91
+        }
+      ]
+    },
+    {
+      "procedureId": "309f8600-c428-49e2-bbe8-f2993100525c",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "3f91c4f3-f377-412e-aff8-c6cbceed37b5",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 25
+        },
+        {
+          "itemId": "ad18d133-49fb-45f9-b5a0-0950a4c4c50a",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 97
+        }
+      ]
+    },
+    {
+      "procedureId": "e14f7a41-cac9-43b7-b5e8-da386428b406",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "3fc46369-9400-49da-a69d-7d69d7bf092a",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 82
+        },
+        {
+          "itemId": "3203b762-cee2-4ad6-a381-497dec08231b",
+          "itemName": "Hematology Analyzer",
+          "itemQuantity": 47
+        }
+      ]
+    },
+    {
+      "procedureId": "a7454bfc-3a53-48fd-970d-a3a67a9bd4de",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "2218545a-e3ed-420d-97aa-1132063b0b95",
+          "itemName": "Control Plasma",
+          "itemQuantity": 16
+        },
+        {
+          "itemId": "7800b3ff-65e4-4e8e-8edf-adeaa1e819f0",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 41
+        },
+        {
+          "itemId": "a4ab4500-0aad-479d-bdf0-d6f79235827b",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 35
+        }
+      ]
+    },
+    {
+      "procedureId": "28cdad87-8092-4e28-9585-7be90c3d4fef",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "32d6e51c-d31c-4740-aee2-905c41c51f3f",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 87
+        }
+      ]
+    },
+    {
+      "procedureId": "1245c66e-8399-4a8e-b992-a2ff0f34453a",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "f6da1002-6b01-456d-80c4-02486fe5c584",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 3
+        },
+        {
+          "itemId": "4f266fe5-fab0-47cc-ba97-5f7b688785d5",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 83
+        }
+      ]
+    },
+    {
+      "procedureId": "a37350af-79a8-44d5-a7a1-ce5af633337a",
+      "procedureName": "Complete Blood Count (CBC)",
+      "procedureDescription": "Measures various components of blood such as red cells, white cells, and platelets.",
+      "procedureItems": [
+        {
+          "itemId": "e5e00a3a-e7dc-4bc8-a403-48f5d086d63b",
+          "itemName": "Hematology Analyzer",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "50559d33-e605-4709-9ce5-2f3e993be208",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 47
+        },
+        {
+          "itemId": "3c6f1470-2e6e-45ca-8e02-332cbb6406b0",
+          "itemName": "Microscope Slides",
+          "itemQuantity": 51
+        }
+      ]
+    },
+    {
+      "procedureId": "c5cc639c-5c12-4faf-94fb-ddcd12d88690",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "c372442e-cbd5-41df-baf1-26afaacfaf13",
+          "itemName": "Blood Culture Bottles",
+          "itemQuantity": 50
+        },
+        {
+          "itemId": "ce8e0d0a-2949-4be3-905b-864797346f40",
+          "itemName": "Incubator",
+          "itemQuantity": 12
+        }
+      ]
+    },
+    {
+      "procedureId": "ce57734e-329d-4dce-9ff8-b906413d5cce",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "c2351d65-725b-4f01-9a4c-b53f3c609ac9",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 49
+        },
+        {
+          "itemId": "12fd7279-0044-40d0-b03e-4d24eee5b1e9",
+          "itemName": "Control Plasma",
+          "itemQuantity": 40
+        },
+        {
+          "itemId": "ae1fb0da-9f57-467f-931c-82d2b2e1659d",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 10
+        }
+      ]
+    },
+    {
+      "procedureId": "5df1c9d0-ddf5-42ed-bd63-9c350ca8b51a",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "7f199439-b56c-4ebd-aeaf-d552969f1a1e",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 83
+        },
+        {
+          "itemId": "1a09e471-bfd1-4e92-8b90-7b3c3931d335",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 43
+        },
+        {
+          "itemId": "14b82844-9f28-41bf-832c-178cb159d4e5",
+          "itemName": "Centrifuge",
+          "itemQuantity": 39
+        }
+      ]
+    },
+    {
+      "procedureId": "45a937aa-4eaa-4c24-b7a7-1810bc8254d4",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "ffcaeaf8-9cf1-456f-9903-c44b10eaf457",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 12
+        },
+        {
+          "itemId": "177ef63d-cf42-4c3b-ad0c-6f63c142a969",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 45
+        }
+      ]
+    },
+    {
+      "procedureId": "f95c862f-e6b8-4863-9f8b-cbe3245ed753",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "ecb78b1c-2b58-4633-a150-fad073a3a379",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 52
+        },
+        {
+          "itemId": "8a3e7217-b624-46e3-a39d-7260b7852cb4",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 37
+        },
+        {
+          "itemId": "7b66fa44-5c3f-4f13-a2c7-fb6168e95c0a",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 99
+        }
+      ]
+    },
+    {
+      "procedureId": "3b0ab542-0a5b-451b-b0e6-baf185900652",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "c11ce36e-715d-4aae-8f8e-7f7b405137b2",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 49
+        },
+        {
+          "itemId": "43785ae1-0240-4e02-bf9c-1232b2f23780",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 86
+        },
+        {
+          "itemId": "57593944-5c5d-42d0-9f2f-738a6b909168",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 44
+        }
+      ]
+    },
+    {
+      "procedureId": "c6586312-dc19-4a9e-97b4-4b00b9e3fc92",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "20741046-917c-4c0b-9f71-d0c6489e1fcc",
+          "itemName": "Chemistry Analyzer",
+          "itemQuantity": 47
+        },
+        {
+          "itemId": "fe2c1cbb-6d34-44de-a042-322a226da404",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 11
+        },
+        {
+          "itemId": "d76bd52e-5bf8-408a-99eb-515e69e006a6",
+          "itemName": "Centrifuge",
+          "itemQuantity": 100
+        }
+      ]
+    },
+    {
+      "procedureId": "e43da21b-9a10-4ba9-9508-573eea423f69",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "83df98e0-d39d-4253-80ee-48ec7d28def1",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 21
+        }
+      ]
+    },
+    {
+      "procedureId": "3ea3db13-da99-4c05-9d27-f148f5476a84",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "dff33d03-2165-49e3-bfb2-321c35d3f425",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 37
+        },
+        {
+          "itemId": "d1c60fa9-fcb1-401f-97e4-162449adacc0",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 71
+        }
+      ]
+    },
+    {
+      "procedureId": "277cb8b8-8f78-490b-8025-b53172b59165",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "023c8912-0105-47f8-951e-9c03a7bfd920",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 65
+        }
+      ]
+    },
+    {
+      "procedureId": "226a3956-b916-411f-bb1a-e552cd35d109",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "7839e723-9896-4c94-bf92-5871b926c727",
+          "itemName": "Incubator",
+          "itemQuantity": 83
+        },
+        {
+          "itemId": "87e64b00-9440-4ab8-aaae-00c039d734ba",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 5
+        }
+      ]
+    },
+    {
+      "procedureId": "d1cc10b2-2f8f-42b1-b661-37e52878182a",
+      "procedureName": "Blood Culture",
+      "procedureDescription": "Detects bacterial or fungal infections in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "7bf580c3-16f2-42ac-9012-de1b9380dcbf",
+          "itemName": "Sterile Syringes",
+          "itemQuantity": 76
+        }
+      ]
+    },
+    {
+      "procedureId": "d4ca2262-50d9-4b2e-8d73-2d7d65ef7078",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "e306340e-2661-4570-b39e-88af83d1eac8",
+          "itemName": "Immunoassay Analyzer",
+          "itemQuantity": 93
+        },
+        {
+          "itemId": "a931cab4-2850-469e-8076-90a7a91be23b",
+          "itemName": "Sample Tubes",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "6b87f939-ae5d-46b9-9ca8-96de5dcc7ba5",
+          "itemName": "Thyroid Test Kit",
+          "itemQuantity": 53
+        }
+      ]
+    },
+    {
+      "procedureId": "315f8dbb-f06e-4339-9420-8e3fb016429f",
+      "procedureName": "COVID-19 PCR Test",
+      "procedureDescription": "Detects SARS-CoV-2 genetic material.",
+      "procedureItems": [
+        {
+          "itemId": "b85506a8-0066-4dbe-ba51-4624551a9252",
+          "itemName": "RT-PCR Machine",
+          "itemQuantity": 45
+        },
+        {
+          "itemId": "fcea676e-77b0-4634-ac64-88344d18a249",
+          "itemName": "Nasopharyngeal Swab",
+          "itemQuantity": 50
+        }
+      ]
+    },
+    {
+      "procedureId": "e0dd81dd-f371-4379-a194-2a9e66a7b682",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "1cd166a1-eb87-465b-bd3f-fba573542a5e",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 66
+        }
+      ]
+    },
+    {
+      "procedureId": "27db8bff-956c-45a5-84af-1c20e764583b",
+      "procedureName": "Liver Function Test (LFT)",
+      "procedureDescription": "Evaluates liver enzymes and proteins in the blood.",
+      "procedureItems": [
+        {
+          "itemId": "762af272-16f9-44b7-99e5-71e38f58246a",
+          "itemName": "Reagent Kit",
+          "itemQuantity": 50
+        },
+        {
+          "itemId": "01f8b026-716e-4518-88c7-807c43014fbf",
+          "itemName": "Clinical Chemistry Analyzer",
+          "itemQuantity": 90
+        }
+      ]
+    },
+    {
+      "procedureId": "a4317e15-1426-45cf-8efa-5fe602cd0c69",
+      "procedureName": "HbA1c Test",
+      "procedureDescription": "Determines average blood glucose over past 3 months.",
+      "procedureItems": [
+        {
+          "itemId": "a0d021fd-ae4e-41fe-bb34-b47eabc0a4fc",
+          "itemName": "EDTA Tube",
+          "itemQuantity": 27
+        },
+        {
+          "itemId": "d0a4e140-7aaa-487a-800e-7c1fa771a8fa",
+          "itemName": "Reagent Cartridge",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "43bd82bb-0196-4588-8248-bba2ab3e6899",
+          "itemName": "HbA1c Analyzer",
+          "itemQuantity": 24
+        }
+      ]
+    },
+    {
+      "procedureId": "c722b44c-9037-4bbf-903b-642e3f5bc03d",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "a2b8e4d1-8427-4618-9b3e-c4352e811187",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 24
+        },
+        {
+          "itemId": "f8e94419-c53a-46b0-81a5-2585dd189fa7",
+          "itemName": "Control Plasma",
+          "itemQuantity": 61
+        },
+        {
+          "itemId": "2bdfee63-94ed-4b63-998a-76c887768fc7",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 58
+        }
+      ]
+    },
+    {
+      "procedureId": "12c9d480-17d3-44c7-85c2-247db0632936",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "bce67444-d1f6-4736-8208-72d07c15a326",
+          "itemName": "Citrate Tube",
+          "itemQuantity": 34
+        },
+        {
+          "itemId": "95dac480-1c55-40ab-9acd-910064ba4577",
+          "itemName": "Coagulation Analyzer",
+          "itemQuantity": 31
+        },
+        {
+          "itemId": "d62621a5-0844-49f8-8f81-53075a2cf1f4",
+          "itemName": "Control Plasma",
+          "itemQuantity": 76
+        }
+      ]
+    },
+    {
+      "procedureId": "61a5a887-3adc-40e5-8819-94f1f81a34d5",
+      "procedureName": "Prothrombin Time (PT) Test",
+      "procedureDescription": "Measures blood clotting time.",
+      "procedureItems": [
+        {
+          "itemId": "162757fb-5bdc-4814-a842-c52164396e55",
+          "itemName": "Control Plasma",
+          "itemQuantity": 27
+        }
+      ]
+    },
+    {
+      "procedureId": "b5adf5b0-59b4-400d-a45d-8fbd48b18fec",
+      "procedureName": "Thyroid Stimulating Hormone (TSH) Test",
+      "procedureDescription": "Measures TSH to evaluate thyroid function.",
+      "procedureItems": [
+        {
+          "itemId": "beacd4b7-5def-4659-b3ac-c0a1af4bcc8a",
+          "itemName": "Immunoassay Analyzer",
+          "itemQuantity": 14
+        }
+      ]
+    },
+    {
+      "procedureId": "606239cf-5c46-4d40-9c46-0f4fc8e7a1a8",
+      "procedureName": "Urinalysis",
+      "procedureDescription": "Analyzes urine for various disorders.",
+      "procedureItems": [
+        {
+          "itemId": "f6cc1171-6ca0-407a-ba99-2381f6d8f68f",
+          "itemName": "Urine Analyzer",
+          "itemQuantity": 25
+        },
+        {
+          "itemId": "79d74d95-4298-4f6d-ae98-ef3c8209c5db",
+          "itemName": "Urine Collection Cup",
+          "itemQuantity": 12
+        }
+      ]
+    },
+    {
+      "procedureId": "b4ec2a94-20f2-423c-bb43-09792240bc3c",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "b50bf455-3fdb-46fc-b6a5-2d5d63032660",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 54
+        }
+      ]
+    },
+    {
+      "procedureId": "4894f249-a5a6-46a3-8cd7-a82545a572bd",
+      "procedureName": "Basic Metabolic Panel (BMP)",
+      "procedureDescription": "Measures glucose, calcium, and electrolytes to assess metabolism.",
+      "procedureItems": [
+        {
+          "itemId": "39624b9b-0b77-4a64-86eb-ca0e2a52aa63",
+          "itemName": "Centrifuge",
+          "itemQuantity": 4
+        },
+        {
+          "itemId": "dd25c962-a902-4eac-9545-e6f3b961985e",
+          "itemName": "Serum Separator Tube",
+          "itemQuantity": 34
+        }
+      ]
+    }
+  ]
+}

@@ -13,13 +13,12 @@
 
     <VBox spacing="10.0" styleClass="confirmProcedureHeader">
         <Label text="Escolha o procedimento" styleClass="confirmProcedureTitle"/>
-        <SearchBar/>
+        <SearchBar fx:id="searchBar"/>
     </VBox>
 
     <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="proceduresScrollPane">
         <FlowPane fx:id="proceduresContainer"
                   hgap="12.0" vgap="12.0"
-                  prefWidth="600.0"
                   styleClass="proceduresContainer">
         </FlowPane>
     </ScrollPane>

@@ -4,11 +4,12 @@
     -fx-font-family: 'Nunito', sans-serif;
     -fx-font-smoothing-type: gray;
     background-color: #C0E6DE;
+    -fx-background-color: #C0E6DE;
 }
 
 .confirmProcedureMain {
     -fx-background-color: #C0E6DE;
-
+    background-color: #C0E6DE;
 }
 
 .confirmProcedureTitle {
@@ -35,16 +36,17 @@
 }
 
 .proceduresScrollPane {
-    background-color: NONE;
     -fx-border-radius: 16px;
     -fx-background-radius: 16px;
-    -fx-background-color: NONE;
+    -fx-background: transparent;
+    -fx-background-color: transparent;
 }
 
 .proceduresContainer {
     -fx-border-radius: 16px;
+    -fx-border-radius: 16px;
     -fx-background-radius: 16px;
-    -fx-background-color: NONE;
+    -fx-background-color: #C0E6DE;
 }
 
 .procedureContainer {

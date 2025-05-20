@@ -58,4 +58,12 @@ public class Procedure extends VBox {
     public void setProcedureTitle(Text procedureTitle) {
         this.procedureTitle = procedureTitle;
     }
+
+    public Button getProcedureButton() { return procedureButton; }
+
+    public void setProcedureButton(Button procedureButton) { this.procedureButton = procedureButton; }
+
+    public boolean isSelected() { return isSelected; }
+
+    public void setSelected(boolean selected) { isSelected = selected; }
 }

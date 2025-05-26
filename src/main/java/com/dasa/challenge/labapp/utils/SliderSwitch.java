@@ -1,62 +1,40 @@
 package com.dasa.challenge.labapp.utils;
 
-import javafx.animation.ParallelTransition;
-import javafx.animation.TranslateTransition;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.animation.FadeTransition;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.Objects;
 
 public class SliderSwitch {
-    public static <T> void slide(Stage stage, Class<T> controllerClass, String fxmlPath, String cssPath) {
+    public static void slideToUseCase(Stage stage, Runnable nextUseCaseStart, String cssPath) {
         try {
-            new Thread(() -> {
+            javafx.application.Platform.runLater(() -> {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(SliderSwitch.class.getResource(fxmlPath));
-                    T controllerInstance = controllerClass.getDeclaredConstructor().newInstance();
-                    fxmlLoader.setController(controllerInstance);
-                    fxmlLoader.setRoot(controllerInstance);
-                    Parent newRoot = fxmlLoader.load();
+                    Scene scene = stage.getScene();
+                    scene.getStylesheets().clear();
 
-                    javafx.application.Platform.runLater(() -> {
-                        StackPane rootContainer = (StackPane) stage.getScene().getRoot();
-                        Parent currentRoot = (Parent) rootContainer.getChildren().get(0);
-
-                        newRoot.setTranslateX(stage.getWidth());
-                        rootContainer.getChildren().add(newRoot);
-
-                        TranslateTransition slideOut = new TranslateTransition(Duration.millis(500), currentRoot);
-                        slideOut.setFromX(0);
-                        slideOut.setToX(-stage.getWidth());
-
-                        TranslateTransition slideIn = new TranslateTransition(Duration.millis(500), newRoot);
-                        slideIn.setFromX(stage.getWidth());
-                        slideIn.setToX(0);
-
-                        ParallelTransition transition = new ParallelTransition(slideOut, slideIn);
-                        transition.setOnFinished(event -> {
-                            rootContainer.getChildren().remove(currentRoot);
-                        });
-
-                        Scene scene = stage.getScene();
+                    if (cssPath != null) {
                         scene.getStylesheets().add(Objects.requireNonNull(
                                 SliderSwitch.class.getResource(cssPath)).toExternalForm()
                         );
+                    }
 
-                        transition.play();
-                    });
+                    FadeTransition ft = new FadeTransition(Duration.millis(300), scene.getRoot());
+                    ft.setFromValue(0);
+                    ft.setToValue(1);
+                    ft.play();
 
+                    nextUseCaseStart.run();
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
-            }).start();
+            });
 
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
+
 }

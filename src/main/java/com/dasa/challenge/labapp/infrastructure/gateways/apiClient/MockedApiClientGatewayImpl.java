@@ -1,8 +1,8 @@
-package com.dasa.challenge.labapp.application.usecases.apiClient.impl;
+package com.dasa.challenge.labapp.infrastructure.gateways.apiClient;
 
 import com.dasa.challenge.labapp.application.dtos.ItemDTO;
 import com.dasa.challenge.labapp.application.dtos.ProcedureDTO;
-import com.dasa.challenge.labapp.application.usecases.apiClient.ApiClientUseCase;
+import com.dasa.challenge.labapp.application.gateways.apiClient.ApiClientGateway;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.UUID;
 
-public class MockedApiClientUseCaseImpl implements ApiClientUseCase {
+public class MockedApiClientGatewayImpl implements ApiClientGateway {
+
     @Override
     public ArrayList<ProcedureDTO> getProcedures() {
         try {
@@ -83,5 +84,4 @@ public class MockedApiClientUseCaseImpl implements ApiClientUseCase {
 
         return items;
     }
-
 }

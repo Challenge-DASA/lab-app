@@ -1,38 +1,26 @@
 package com.dasa.challenge.labapp.application.usecases.home.impl;
 
-import com.dasa.challenge.labapp.application.usecases.confirmProcedure.ConfirmProcedureUseCase;
+import com.dasa.challenge.labapp.application.gateways.home.HomeGateway;
 import com.dasa.challenge.labapp.application.usecases.home.HomePageUseCase;
-import com.dasa.challenge.labapp.infrastructure.controllers.HomeController;
-import com.dasa.challenge.labapp.utils.SliderSwitch;
 import javafx.stage.Stage;
 
 public class HomePageUseCaseImpl implements HomePageUseCase {
     private final Stage stage;
-    private final ConfirmProcedureUseCase confirmProcedureUseCase;
-    private HomeController controller;
+    private final HomeGateway homeGateway;
 
-    public HomePageUseCaseImpl(Stage stage, ConfirmProcedureUseCase confirmProcedureUseCase) {
+    public HomePageUseCaseImpl(HomeGateway homeGateway, Stage stage) {
+        this.homeGateway = homeGateway;
         this.stage = stage;
-        this.confirmProcedureUseCase = confirmProcedureUseCase;
     }
 
     @Override
     public void start() {
-        this.controller = new HomeController(this);
-        controller.initializeView(stage);
+        this.homeGateway.start();
     }
 
     @Override
     public void nextPage() {
-        SliderSwitch.slideToUseCase(stage,
-                confirmProcedureUseCase::start,
-                "/com/dasa/challenge/labapp/styles/confirm-procedure/confirm-procedure.css");
-    }
-
-    public void handleStartWithdraw() {
-        System.out.println("Starting withdrawal process...");
-
-        nextPage();
+        this.homeGateway.nextPage();
     }
 
     protected Stage getStage() {

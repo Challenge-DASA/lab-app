@@ -133,3 +133,85 @@
     -fx-font-weight: bold;
     -fx-cursor: hand;
 }
+
+.confirmProcedureMain {
+    -fx-background-color: #E8F5F5;
+}
+
+.confirmProcedureTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3450D8;
+}
+
+.proceduresScrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.proceduresContainer {
+    -fx-padding: 10;
+}
+
+.selectedProceduresBar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, -3);
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1 0 0 0;
+}
+
+.selectedCountLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3450D8;
+    -fx-min-width: 120;
+}
+
+.selectedProceduresScrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-max-height: 40;
+}
+
+.selectedProceduresScrollPane .scroll-bar:horizontal {
+    -fx-pref-height: 8;
+}
+
+.selectedProceduresContainer {
+    -fx-background-color: transparent;
+}
+
+.selected-procedure-item {
+    -fx-background-color: #F0F4FF;
+    -fx-padding: 5 10;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.selected-procedure-name {
+    -fx-font-size: 12px;
+    -fx-text-fill: #3450D8;
+}
+
+.continueButton {
+    -fx-background-color: white;
+    -fx-text-fill: #3450D8;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-min-width: 120;
+    -fx-border-color: #3450D8;
+    -fx-border-radius: 20;
+}
+
+.continueButton:hover {
+    -fx-background-color: #3450D8;
+    -fx-text-fill: white;
+
+}
+
+.continueButton:disabled {
+    -fx-background-color: #CCCCCC;
+    -fx-cursor: default;
+}

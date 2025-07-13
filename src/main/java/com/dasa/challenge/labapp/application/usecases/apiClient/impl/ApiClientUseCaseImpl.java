@@ -1,9 +1,9 @@
 package com.dasa.challenge.labapp.application.usecases.apiClient.impl;
 
-import com.dasa.challenge.labapp.application.dtos.ItemDTO;
-import com.dasa.challenge.labapp.application.dtos.ProcedureDTO;
 import com.dasa.challenge.labapp.application.gateways.apiClient.ApiClientGateway;
 import com.dasa.challenge.labapp.application.usecases.apiClient.ApiClientUseCase;
+import com.dasa.challenge.labapp.domain.entities.Procedure;
+import com.dasa.challenge.labapp.domain.entities.ProcedureItem;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -17,7 +17,7 @@ public class ApiClientUseCaseImpl implements ApiClientUseCase {
     }
 
     @Override
-    public ArrayList<ProcedureDTO> getProcedures() {
+    public ArrayList<Procedure> getProcedures() {
         return this.apiClientGateway.getProcedures();
     }
 
@@ -27,7 +27,7 @@ public class ApiClientUseCaseImpl implements ApiClientUseCase {
     }
 
     @Override
-    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ItemDTO> items) {
+    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ProcedureItem> items) {
         return this.apiClientGateway.sendWithdrawnItems(withdrawProtocol, items);
     }
 

@@ -68,13 +68,11 @@ public class ProcedureComponent extends VBox {
             procedureDescription.setText(procedure.getDisplayDescription(40));
             procedureItems.setText(procedure.getFormattedItems());
 
-            // Update selection state
             updateSelectionState();
         }
     }
 
     private void updateSelectionState() {
-        System.out.println("Updating selection state for procedure: " + procedure.getName());
         if (procedure.isSelected()) {
             procedureContainer.getStyleClass().removeAll("unselected");
             procedureContainer.getStyleClass().add("selected");

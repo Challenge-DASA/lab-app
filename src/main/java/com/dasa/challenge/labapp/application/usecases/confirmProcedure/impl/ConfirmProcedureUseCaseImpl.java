@@ -29,10 +29,6 @@ public class ConfirmProcedureUseCaseImpl implements ConfirmProcedureUseCase {
         this.confirmProcedureGateway.nextPage();
     }
 
-    public void handleConfirmProcedures() {
-        System.out.println("Confirming selected procedures...");
-    }
-
     @Override
     public void selectProcedure(Procedure procedure) {
         this.confirmProcedureGateway.selectProcedure(procedure);
@@ -41,11 +37,6 @@ public class ConfirmProcedureUseCaseImpl implements ConfirmProcedureUseCase {
     @Override
     public void deselectProcedure(Procedure procedure) {
         this.confirmProcedureGateway.deselectProcedure(procedure);
-    }
-
-    @Override
-    public List<Procedure> getSelectedProcedures() {
-        return this.confirmProcedureGateway.getSelectedProcedures();
     }
 
     @Override

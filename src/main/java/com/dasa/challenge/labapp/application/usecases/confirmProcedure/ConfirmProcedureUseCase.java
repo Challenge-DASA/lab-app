@@ -12,8 +12,6 @@ public interface ConfirmProcedureUseCase extends PageUseCase {
 
     void deselectProcedure(Procedure procedure);
 
-    List<Procedure> getSelectedProcedures();
-
     void confirmSelectedProcedures();
 
     List<Procedure> filterProcedures(List<Procedure> procedures, String searchText);

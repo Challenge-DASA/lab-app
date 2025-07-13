@@ -1,8 +1,8 @@
 package com.dasa.challenge.labapp.infrastructure.gateways.apiClient;
 
-import com.dasa.challenge.labapp.application.dtos.ItemDTO;
-import com.dasa.challenge.labapp.application.dtos.ProcedureDTO;
 import com.dasa.challenge.labapp.application.gateways.apiClient.ApiClientGateway;
+import com.dasa.challenge.labapp.domain.entities.Procedure;
+import com.dasa.challenge.labapp.domain.entities.ProcedureItem;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,22 +14,22 @@ import java.util.UUID;
 public class MockedApiClientGatewayImpl implements ApiClientGateway {
 
     @Override
-    public ArrayList<ProcedureDTO> getProcedures() {
+    public ArrayList<Procedure> getProcedures() {
         try {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode json = mapper.readTree(new File(Objects.requireNonNull
                     (getClass().getResource("/data/procedure_mock.json")).toURI()));
-            ArrayList<ProcedureDTO> proceduresData = new ArrayList<>();
+            ArrayList<Procedure> proceduresData = new ArrayList<>();
 
             JsonNode procedures = json.get("procedures");
             for (JsonNode procedure : procedures) {
                 final UUID procedureId = UUID.fromString(procedure.get("procedureId").asText());
                 final String procedureName = procedure.get("procedureName").asText();
                 final String procedureDescription = procedure.get("procedureDescription").asText();
-                final ArrayList<ItemDTO> procedureItems = getProcedureItems(procedure);
+                final ArrayList<ProcedureItem> procedureItems = getProcedureItems(procedure);
 
-                ProcedureDTO procedureData =
-                        new ProcedureDTO(procedureId,
+                Procedure procedureData =
+                        new Procedure(procedureId.toString(),
                                 procedureName,
                                 procedureDescription,
                                 procedureItems);
@@ -47,7 +47,6 @@ public class MockedApiClientGatewayImpl implements ApiClientGateway {
     @Override
     public UUID authenticateUser(String userId, String userPassword) {
         if (userId.isEmpty() || userPassword.isEmpty()) {
-            System.out.println("User ID or password cannot be empty.");
             return null;
         }
 
@@ -55,31 +54,25 @@ public class MockedApiClientGatewayImpl implements ApiClientGateway {
     }
 
     @Override
-    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ItemDTO> items) {
+    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ProcedureItem> items) {
         if (withdrawProtocol == null || items == null || items.isEmpty()) {
-            System.out.println("Withdraw protocol or items cannot be null or empty.");
             return null;
-        }
-
-        System.out.println("Items withdrawn successfully with protocol: " + withdrawProtocol);
-        for (ItemDTO item : items) {
-            System.out.println("Item: " + item.itemName() + ", Quantity: " + item.itemQuantity() + ", was withdrawn.");
         }
 
         return withdrawProtocol;
     }
 
-    private ArrayList<ItemDTO> getProcedureItems(JsonNode procedure) {
-        ArrayList<ItemDTO> items = new ArrayList<>();
+    private ArrayList<ProcedureItem> getProcedureItems(JsonNode procedure) {
+        ArrayList<ProcedureItem> items = new ArrayList<>();
 
         procedure.get("procedureItems").elements()
                 .forEachRemaining(item -> {
-                    ItemDTO itemDTO = new ItemDTO(
-                            UUID.fromString(item.get("itemId").asText()),
+                    ProcedureItem procedureItem = new ProcedureItem(
                             item.get("itemName").asText(),
-                            item.get("itemQuantity").asInt()
+                            item.get("itemQuantity").asInt(),
+                            UUID.fromString(item.get("itemId").asText()).toString()
                     );
-                    items.add(itemDTO);
+                    items.add(procedureItem);
                 });
 
         return items;

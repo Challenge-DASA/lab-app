@@ -12,28 +12,22 @@ public class SliderSwitch {
     public static void slideTo(Stage stage, Runnable nextScreenStart, String cssPath) {
         javafx.application.Platform.runLater(() -> {
             try {
-                javafx.application.Platform.runLater(() -> {
-                    try {
-                        Scene scene = stage.getScene();
-                        scene.getStylesheets().clear();
+                Scene scene = stage.getScene();
+                scene.getStylesheets().clear();
 
-                        if (cssPath != null) {
-                            scene.getStylesheets().add(Objects.requireNonNull(
-                                    SliderSwitch.class.getResource(cssPath)).toExternalForm()
-                            );
-                        }
+                if (cssPath != null) {
+                    scene.getStylesheets().add(Objects.requireNonNull(
+                            SliderSwitch.class.getResource(cssPath)).toExternalForm()
+                    );
+                }
 
-                        FadeTransition ft = new FadeTransition(Duration.millis(300), scene.getRoot());
-                        ft.setFromValue(0);
-                        ft.setToValue(1);
-                        ft.play();
+                FadeTransition ft = new FadeTransition(Duration.millis(300), scene.getRoot());
+                ft.setFromValue(0);
+                ft.setToValue(1);
+                ft.play();
 
-                        nextScreenStart.run();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                });
-
+                System.out.println("Sliding to next screen...");
+                nextScreenStart.run();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.TextField?>
+
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml">
+    <TextField fx:id="searchField" promptText="Pesquisar" styleClass="fieldSearchBar"/>
+</fx:root>

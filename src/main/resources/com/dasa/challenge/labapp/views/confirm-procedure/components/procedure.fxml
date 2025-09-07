@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import com.dasa.challenge.labapp.infrastructure.components.ProcedureButtonComponent?>
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml" styleClass="procedureContainer" maxWidth="240.0"
+         maxHeight="250.0" fx:id="procedureContainer">
+    <VBox styleClass="procedureHeader">
+        <TextFlow>
+            <Text fx:id="procedureTitle" styleClass="procedureTitle"/>
+        </TextFlow>
+        <!--        <Text fx:id="procedureId" styleClass="procedureId"/>-->
+    </VBox>
+    <VBox styleClass="procedureBody">
+        <TextFlow>
+            <Text fx:id="procedureItems" styleClass="procedureItems"/>
+        </TextFlow>
+        <TextFlow>
+            <Text fx:id="procedureDescription" styleClass="procedureDescription"/>
+        </TextFlow>
+        <ProcedureButtonComponent fx:id="procedureButton" alignment="CENTER" styleClass="procedureButton"/>
+    </VBox>
+</fx:root>

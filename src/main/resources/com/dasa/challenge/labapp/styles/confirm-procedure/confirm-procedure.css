@@ -1,5 +1,217 @@
-.titleText {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+.root {
+    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-smoothing-type: gray;
+    background-color: #C0E6DE;
+    -fx-background-color: #C0E6DE;
+}
+
+.confirmProcedureMain {
+    -fx-background-color: #C0E6DE;
+    background-color: #C0E6DE;
+}
+
+.confirmProcedureTitle {
     -fx-font-size: 24px;
-    -fx-text-fill: #9b34db;
+    -fx-text-fill: #3450D8;
     -fx-font-weight: bold;
+}
+
+.fieldSearchBar {
+    -fx-border-color: #3450D8;
+    -fx-background-color: NONE;
+    -fx-border-radius: 16px;
+    -fx-max-width: 128px;
+
+}
+
+.labelSearchBar {
+    -fx-text-fill: #8080A7;
+    -fx-font-weight: bold;
+}
+
+.confirmProcedureHeader {
+    -fx-padding: 0 0 12px 0;
+}
+
+.proceduresScrollPane {
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.proceduresContainer {
+    -fx-border-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-background-color: #C0E6DE;
+}
+
+.procedureContainer.unselected {
+    -fx-background-color: white;
+    -fx-text-fill: #3450D8;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-padding: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
+    -fx-min-width: 240px;
+    -fx-max-width: 240px;
+    -fx-min-height: 180px;
+    -fx-max-height: 180px;
+
+}
+.procedureContainer.selected {
+    -fx-background-color: #3450D8;
+    -fx-text-fill: white;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-padding: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
+    -fx-min-width: 240px;
+    -fx-max-width: 240px;
+    -fx-min-height: 180px;
+    -fx-max-height: 180px;
+
+}
+
+
+.procedureContainer:hover {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 0, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.procedureHeader {
+    -fx-pref-height: 30px;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+}
+
+.procedureBody {
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-min-height: 140px;
+    -fx-max-height: 140px;
+    -fx-padding: 8 12 8 0;
+    -fx-background-color: transparent;
+    -fx-spacing: 8px;
+}
+
+.procedureTitle {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3450D8;
+    -fx-background-color: NONE;
+    -fx-wrap-text: true;
+    -fx-max-width: 200px;
+    -fx-padding: 0 0 4px 0;
+}
+
+.procedureItems, .procedureDescription {
+    -fx-font-size: 12px;
+    -fx-wrap-text: true;
+    -fx-max-width: 200px;
+}
+
+.procedureItems {
+    -fx-text-fill: #555;
+}
+
+.procedureDescription {
+    -fx-text-fill: #777;
+}
+
+.procedureButton {
+    -fx-alignment: center;
+    -fx-padding: 6 12;
+    -fx-background-radius: 8;
+    -fx-background-color: #3450D8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.confirmProcedureMain {
+    -fx-background-color: #E8F5F5;
+}
+
+.confirmProcedureTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3450D8;
+}
+
+.proceduresScrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.proceduresContainer {
+    -fx-padding: 10;
+}
+
+.selectedProceduresBar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, -3);
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1 0 0 0;
+}
+
+.selectedCountLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3450D8;
+    -fx-min-width: 120;
+}
+
+.selectedProceduresScrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-max-height: 40;
+}
+
+.selectedProceduresScrollPane .scroll-bar:horizontal {
+    -fx-pref-height: 8;
+}
+
+.selectedProceduresContainer {
+    -fx-background-color: transparent;
+}
+
+.selected-procedure-item {
+    -fx-background-color: #F0F4FF;
+    -fx-padding: 5 10;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.selected-procedure-name {
+    -fx-font-size: 12px;
+    -fx-text-fill: #3450D8;
+}
+
+.continueButton {
+    -fx-background-color: white;
+    -fx-text-fill: #3450D8;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-min-width: 120;
+    -fx-border-color: #3450D8;
+    -fx-border-radius: 20;
+}
+
+.continueButton:hover {
+    -fx-background-color: #3450D8;
+    -fx-text-fill: white;
+
+}
+
+.continueButton:disabled {
+    -fx-background-color: #CCCCCC;
+    -fx-cursor: default;
 }

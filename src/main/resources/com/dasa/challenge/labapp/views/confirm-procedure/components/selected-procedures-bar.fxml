@@ -1,0 +1,37 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<fx:root type="VBox" xmlns:fx="http://javafx.com/fxml" styleClass="selectedProceduresBar" fx:id="selectedProceduresBar">
+    <padding>
+        <Insets top="15" right="20" bottom="15" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label fx:id="selectedCountLabel" text="0 Selecionados" styleClass="selectedCountLabel"/>
+
+        <ScrollPane fx:id="selectedProceduresScrollPane"
+                    fitToHeight="true"
+                    hbarPolicy="AS_NEEDED"
+                    vbarPolicy="NEVER"
+                    styleClass="selectedProceduresScrollPane"
+                    HBox.hgrow="ALWAYS">
+            <HBox fx:id="selectedProceduresContainer"
+                  spacing="10"
+                  alignment="CENTER_LEFT"
+                  styleClass="selectedProceduresContainer">
+                <padding>
+                    <Insets top="5" right="5" bottom="5" left="5"/>
+                </padding>
+            </HBox>
+        </ScrollPane>
+
+        <Button fx:id="continueButton"
+                text="Continuar"
+                styleClass="continueButton"
+                disable="true"/>
+    </HBox>
+</fx:root>

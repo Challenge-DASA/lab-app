@@ -1,0 +1,296 @@
+{
+  "procedures": [
+    {
+      "procedureId": "3a98b6b5-d39e-480d-9570-535824e032b9",
+      "procedureName": "Hemograma Completo",
+      "procedureDescription": "Avalia células sanguíneas",
+      "procedureItems": [
+        {
+          "itemId": "dcfba773-891d-473c-966f-1c1cb09db9ed",
+          "itemName": "Tubo EDTA",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "ae419cf9-c20b-49fc-ae3c-75f3ed304f48",
+          "itemName": "Lâminas",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "5fb701d0-5c99-48e1-b2a7-5d11ebca21a2",
+          "itemName": "Corantes",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "7b853eea-4752-40b1-838f-563edb8bb348",
+          "itemName": "Ponteiras",
+          "itemQuantity": 5
+        },
+        {
+          "itemId": "4ef4182d-65eb-4883-98ba-bf8ac8896103",
+          "itemName": "Controle hematológico",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "4f89a771-ab2b-40d4-a6f7-9fae9d02d38f",
+      "procedureName": "Glicemia",
+      "procedureDescription": "Mede glicose no sangue",
+      "procedureItems": [
+        {
+          "itemId": "4943e5c2-b51c-4b7f-91f3-e2fb9908b242",
+          "itemName": "Tubo Fluoreto",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "10128615-0efd-4e91-8c8c-fbcc1b766964",
+          "itemName": "Reagente enzimático",
+          "itemQuantity": 200
+        },
+        {
+          "itemId": "76a3fb97-fe40-45e2-8668-52b9b44ee61d",
+          "itemName": "Calibradores e controles",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "f79ff863-a717-4e67-a885-77970d99f030",
+      "procedureName": "Perfil Lipídico",
+      "procedureDescription": "Avalia colesterol e triglicerídeos",
+      "procedureItems": [
+        {
+          "itemId": "dfe7f600-9d95-440a-b966-bb04c9fde9de",
+          "itemName": "Tubo soro",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "2ed287a0-7e05-4631-b210-31d9453417f7",
+          "itemName": "Reagentes",
+          "itemQuantity": 300
+        },
+        {
+          "itemId": "e7b6a066-3a3c-485a-8932-54c893e205e2",
+          "itemName": "Controles bioquímicos",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "f0ea5861-2a7e-4cf4-bd7f-d17de21f5e4b",
+      "procedureName": "Urocultura",
+      "procedureDescription": "Detecta infecção urinária",
+      "procedureItems": [
+        {
+          "itemId": "ec152059-d290-4615-8776-58cbbc80a13b",
+          "itemName": "Frasco urina",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "3fd1f2e0-d291-4f45-a515-5d1e5ca4fc7a",
+          "itemName": "Ágar CLED",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "b43cc9cf-875a-4b4c-991c-f5a0e20299e2",
+          "itemName": "Ágar MacConkey",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "a3a153ed-f1ba-432e-9060-af63d4df499b",
+          "itemName": "Swab",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "66cbc86d-f6b1-4880-ba63-a70f59753c1b",
+          "itemName": "Discos de antibióticos",
+          "itemQuantity": 8
+        }
+      ]
+    },
+    {
+      "procedureId": "90eb89ac-ea2b-4d69-b484-a2977affb2c9",
+      "procedureName": "Teste HIV (Elisa)",
+      "procedureDescription": "Triagem HIV",
+      "procedureItems": [
+        {
+          "itemId": "dfe7f600-9d95-440a-b966-bb04c9fde9de",
+          "itemName": "Tubo soro",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "6bc69083-f1b8-4f2a-ad43-72eeefb07824",
+          "itemName": "Kit Elisa",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "853c7f7d-55e6-430a-8584-aa638f31e15f",
+          "itemName": "Tampões",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "33da2be7-69f3-4cc8-a4a4-9db848a7d226",
+          "itemName": "Controles positivo/negativo",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "0183a63e-1c99-4b04-b141-54beb5abdd5e",
+      "procedureName": "Ova e Parasitos (O&P)",
+      "procedureDescription": "Diagnóstico de parasitoses intestinais",
+      "procedureItems": [
+        {
+          "itemId": "f2206fe1-a18a-4241-b9af-ef8a63fe2c5e",
+          "itemName": "Frasco com conservante",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "ae419cf9-c20b-49fc-ae3c-75f3ed304f48",
+          "itemName": "Lâminas",
+          "itemQuantity": 4
+        },
+        {
+          "itemId": "5d612e7b-3aa1-4534-a689-3a465898444e",
+          "itemName": "Lugol",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "8de0d908-dea5-47ec-8b15-c9bd838bf985",
+          "itemName": "Pipetas e bastões",
+          "itemQuantity": 3
+        }
+      ]
+    },
+    {
+      "procedureId": "1b8d16af-5bcb-47f1-95fc-514e01c48990",
+      "procedureName": "TP/TTPa",
+      "procedureDescription": "Avaliação da coagulação",
+      "procedureItems": [
+        {
+          "itemId": "94c46c27-b43c-484d-9388-99848818dee7",
+          "itemName": "Tubo Citrato",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "d2c45ff6-ab7a-4931-b12d-f13962f3a3d3",
+          "itemName": "Tromboplastina",
+          "itemQuantity": 200
+        },
+        {
+          "itemId": "512f0fb5-3bd6-481b-ab58-37e74c583892",
+          "itemName": "Cephalina",
+          "itemQuantity": 200
+        },
+        {
+          "itemId": "2118f6b6-9611-439e-aa61-04e09f535f09",
+          "itemName": "Controles",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "0013e19e-d61d-476d-873a-60820f3f916f",
+      "procedureName": "Gasometria Arterial",
+      "procedureDescription": "Avalia equilíbrio ácido-base",
+      "procedureItems": [
+        {
+          "itemId": "bc1d1a47-b7c7-4c89-b8d1-346fc1b281f7",
+          "itemName": "Seringa heparinizada",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "ad69c501-7550-410e-972c-a6e41071f580",
+          "itemName": "Solução controle de pH/gases",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "66299a9c-05ea-47fc-aac3-3fe323137465",
+      "procedureName": "TSH",
+      "procedureDescription": "Avaliação da tireoide",
+      "procedureItems": [
+        {
+          "itemId": "dfe7f600-9d95-440a-b966-bb04c9fde9de",
+          "itemName": "Tubo soro",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "625d2c1b-c8c9-4099-9d4f-97a74dc5b9d7",
+          "itemName": "Kit quimioluminescência",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "074bdef1-d3da-4d27-8fa5-1dc42cf224a4",
+          "itemName": "Controles hormonais",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "b257d96f-85ee-4f11-8f28-0e1b1474e8b5",
+      "procedureName": "PCR SARS-CoV-2",
+      "procedureDescription": "Detecta SARS-CoV-2 (COVID-19)",
+      "procedureItems": [
+        {
+          "itemId": "a3a153ed-f1ba-432e-9060-af63d4df499b",
+          "itemName": "Swab",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "4bc4a11d-c5af-4eea-9b2e-74b534d77e10",
+          "itemName": "Meio viral",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "aa7c5b4b-1c3c-4561-b8d1-a2fb9e418ea6",
+          "itemName": "Kit RNA",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "6189fb8a-494e-41f2-ba86-38dd9502a944",
+          "itemName": "Kit PCR",
+          "itemQuantity": 96
+        },
+        {
+          "itemId": "2118f6b6-9611-439e-aa61-04e09f535f09",
+          "itemName": "Controles",
+          "itemQuantity": 1
+        }
+      ]
+    },
+    {
+      "procedureId": "4447a678-9536-4184-a48a-073d298a20e7",
+      "procedureName": "Papanicolau",
+      "procedureDescription": "Rastreio de câncer de colo uterino",
+      "procedureItems": [
+        {
+          "itemId": "ff39eadc-203a-4967-9a0c-7739be52778d",
+          "itemName": "Espátula",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "a11454e2-09d1-49d0-ac59-20b79a308d6e",
+          "itemName": "Escova",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "ae419cf9-c20b-49fc-ae3c-75f3ed304f48",
+          "itemName": "Lâminas",
+          "itemQuantity": 2
+        },
+        {
+          "itemId": "178fe30f-6994-482e-b374-7ecf66020233",
+          "itemName": "Álcool fixador",
+          "itemQuantity": 1
+        },
+        {
+          "itemId": "86b4ff6f-2589-4fed-86c2-c1fb211e8411",
+          "itemName": "Corantes de Papanicolau",
+          "itemQuantity": 1
+        }
+      ]
+    }
+  ]
+}

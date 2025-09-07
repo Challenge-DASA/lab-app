@@ -4,6 +4,8 @@ import com.dasa.challenge.labapp.application.usecases.confirmProcedure.ConfirmPr
 import com.dasa.challenge.labapp.application.usecases.home.HomePageUseCase;
 import com.dasa.challenge.labapp.infrastructure.controllers.HomeController;
 import com.dasa.challenge.labapp.utils.SliderSwitch;
+import com.dasa.challenge.labapp.utils.ViewManager;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 
 public class HomePageUseCaseImpl implements HomePageUseCase {
@@ -19,7 +21,8 @@ public class HomePageUseCaseImpl implements HomePageUseCase {
     @Override
     public void start() {
         this.controller = new HomeController(this);
-        controller.initializeView(stage);
+        Parent view = controller.getView();
+        ViewManager.setView(view);
     }
 
     @Override

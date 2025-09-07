@@ -23,4 +23,5 @@
         </FlowPane>
     </ScrollPane>
 
+    <SelectedProceduresBar fx:id="selectedProceduresBar" />
 </VBox>

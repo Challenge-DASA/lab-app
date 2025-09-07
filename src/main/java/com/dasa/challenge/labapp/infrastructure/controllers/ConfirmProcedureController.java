@@ -39,7 +39,7 @@ public class ConfirmProcedureController {
         this.confirmProcedureUseCase = confirmProcedureUseCase;
     }
 
-    public void initializeView(Stage stage) {
+    public Parent getView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(
                     ConfirmProcedureController.class.getResource(
@@ -49,22 +49,14 @@ public class ConfirmProcedureController {
             fxmlLoader.setController(this);
             Parent root = fxmlLoader.load();
 
-            StackPane rootContainer = new StackPane();
-            rootContainer.getChildren().add(root);
-
-            Scene scene = new Scene(rootContainer, 800, 600);
-            scene.getStylesheets().add(Objects.requireNonNull(
+            root.getStylesheets().add(Objects.requireNonNull(
                     getClass().getResource(
                             "/com/dasa/challenge/labapp/styles/confirm-procedure/confirm-procedure.css"
-                    )
-            ).toExternalForm());
-
-            stage.setTitle("Confirm Procedures - SmartLab Inventory");
-            stage.setScene(scene);
-            stage.show();
+                    ).toExternalForm()));
 
             initializePageLogic();
 
+            return root;
         } catch (IOException err) {
             throw new RuntimeException("Failed to load confirm procedure view", err);
         }

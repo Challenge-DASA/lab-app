@@ -27,7 +27,7 @@ public class HomeController {
         this.homePageUseCase = homePageUseCase;
     }
 
-    public void initializeView(Stage stage) {
+    public Parent getView() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(
                     HomeController.class.getResource("/com/dasa/challenge/labapp/views/home/home.fxml")
@@ -35,17 +35,12 @@ public class HomeController {
             fxmlLoader.setController(this);
             Parent root = fxmlLoader.load();
 
-            StackPane rootContainer = new StackPane();
-            rootContainer.getChildren().add(root);
-
-            Scene scene = new Scene(rootContainer, 800, 600);
-            scene.getStylesheets().add(Objects.requireNonNull(
+            // Attach CSS
+            root.getStylesheets().add(Objects.requireNonNull(
                     getClass().getResource("/com/dasa/challenge/labapp/styles/home/home.css")
             ).toExternalForm());
 
-            stage.setTitle("SmartLab Inventory");
-            stage.setScene(scene);
-            stage.show();
+            return root;
         } catch (IOException err) {
             throw new RuntimeException("Failed to load home view", err);
         }

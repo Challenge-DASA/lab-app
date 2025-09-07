@@ -6,6 +6,7 @@ import com.dasa.challenge.labapp.application.usecases.confirmProcedure.ConfirmPr
 import com.dasa.challenge.labapp.domain.entities.Procedure;
 import com.dasa.challenge.labapp.domain.entities.ProcedureItem;
 import com.dasa.challenge.labapp.infrastructure.controllers.ConfirmProcedureController;
+import com.dasa.challenge.labapp.utils.ViewManager;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
@@ -36,7 +37,8 @@ public class ConfirmProcedureUseCaseImpl implements ConfirmProcedureUseCase {
     @Override
     public void start() {
         ConfirmProcedureController controller = new ConfirmProcedureController(this);
-        controller.initializeView(stage);
+        Parent view = controller.getView();
+        ViewManager.setView(view);
     }
 
     @Override

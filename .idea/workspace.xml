@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="52fce69a-1dd9-40fe-9d04-34bc99672b3d" name="Changes" comment="feat: implement search bar filter, and start procedure selection">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/LabApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/LabApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/application/usecases/confirmProcedure/impl/ConfirmProcedureUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/application/usecases/confirmProcedure/impl/ConfirmProcedureUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/application/usecases/home/impl/HomePageUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/application/usecases/home/impl/HomePageUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/infrastructure/controllers/ConfirmProcedureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/infrastructure/controllers/ConfirmProcedureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/infrastructure/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/infrastructure/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/utils/SliderSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dasa/challenge/labapp/utils/SliderSwitch.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab-app" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2wxdPoLgP1yHRS4RHcI9DBfsCSu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.lab-app [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.lab-app [run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/LAB-3&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ulipe/Documents/projects/lab-app/src/main/resources/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\src\main\resources\data" />
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\data" />
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\src\main\resources\com\dasa\challenge\labapp\styles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\src\main\resources" />
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\src\main\java\com\dasa\challenge\labapp" />
+      <recent name="C:\Users\ulipe\Documents\projects\lab-app\src\main\resources\com\dasa\challenge\labapp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.lab-app [run]">
+    <configuration name="lab-app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="lab-app [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.lab-app [run]" />
+        <item itemvalue="Gradle.lab-app [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52fce69a-1dd9-40fe-9d04-34bc99672b3d" name="Changes" comment="" />
+      <created>1746987139781</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746987139781</updated>
+      <workItem from="1746987141251" duration="29270000" />
+      <workItem from="1747511598017" duration="66660000" />
+      <workItem from="1747699687840" duration="6046000" />
+      <workItem from="1748040197078" duration="99801000" />
+      <workItem from="1757192189932" duration="5737000" />
+      <workItem from="1757269732023" duration="3767000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: implement better stylish and structure to home">
+      <option name="closed" value="true" />
+      <created>1747271634001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747271634001</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor: changes slider to better animation and flow">
+      <option name="closed" value="true" />
+      <created>1747271668768</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747271668768</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: implement initial searchBar component">
+      <option name="closed" value="true" />
+      <created>1747271729780</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747271729780</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: implement basic procedure style">
+      <option name="closed" value="true" />
+      <created>1747271771335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747271771335</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: implement SearchBar component to confirm-procedure fxml">
+      <option name="closed" value="true" />
+      <created>1747271789861</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747271789861</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: import jackson and add mock to construct procedures UI">
+      <option name="closed" value="true" />
+      <created>1747608556833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608556833</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: import jackson and add mock to construct procedures UI">
+      <option name="closed" value="true" />
+      <created>1747608580881</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608580881</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: implement procedureButton">
+      <option name="closed" value="true" />
+      <created>1747608603210</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608603210</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: implement procedure component">
+      <option name="closed" value="true" />
+      <created>1747608612170</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608612170</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: implement improvements to searchBar component">
+      <option name="closed" value="true" />
+      <created>1747608653007</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608653007</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: implement ConfirmProcedure with procedures loading">
+      <option name="closed" value="true" />
+      <created>1747608688926</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608688926</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: changes slider to use default controller of the page to set the fxml">
+      <option name="closed" value="true" />
+      <created>1747608719661</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608719661</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: changes slider to use default controller of the page to set the fxml">
+      <option name="closed" value="true" />
+      <created>1747608731019</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608731019</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: set specific style class to not affect others VBox">
+      <option name="closed" value="true" />
+      <created>1747608769831</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747608769831</updated>
+    </task>
+    <task id="LOCAL-00015" summary="style: changes background and general procedures stylish for better ui">
+      <option name="closed" value="true" />
+      <created>1747703416618</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1747703416618</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: implement search bar filter, and start procedure selection">
+      <option name="closed" value="true" />
+      <created>1747703452640</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1747703452640</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: implement better stylish and structure to home" />
+    <MESSAGE value="refactor: changes slider to better animation and flow" />
+    <MESSAGE value="feat: implement initial searchBar component" />
+    <MESSAGE value="feat: implement basic procedure style" />
+    <MESSAGE value="feat: implement SearchBar component to confirm-procedure fxml" />
+    <MESSAGE value="feat: import jackson and add mock to construct procedures UI" />
+    <MESSAGE value="feat: implement procedureButton" />
+    <MESSAGE value="feat: implement procedure component" />
+    <MESSAGE value="feat: implement improvements to searchBar component" />
+    <MESSAGE value="feat: implement ConfirmProcedure with procedures loading" />
+    <MESSAGE value="refactor: changes slider to use default controller of the page to set the fxml" />
+    <MESSAGE value="fix: set specific style class to not affect others VBox" />
+    <MESSAGE value="style: changes background and general procedures stylish for better ui" />
+    <MESSAGE value="feat: implement search bar filter, and start procedure selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement search bar filter, and start procedure selection" />
+  </component>
+</project>

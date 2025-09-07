@@ -27,7 +27,9 @@ public class BeanConfig {
     @Bean
     @Scope("singleton")
     public Stage stage() {
-        return new Stage();
+        Stage stage = new Stage();
+        stage.setFullScreen(true);
+        return stage;
     }
 
     @Bean

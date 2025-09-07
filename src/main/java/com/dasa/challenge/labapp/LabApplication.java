@@ -24,6 +24,8 @@ public class LabApplication extends Application {
     @Override
     public void start(Stage stage) {
         System.out.println("Starting Lab Application...");
+
+        stage.setTitle("SmartLab Inventory");
         this.homePageUseCase.start();
     }
 

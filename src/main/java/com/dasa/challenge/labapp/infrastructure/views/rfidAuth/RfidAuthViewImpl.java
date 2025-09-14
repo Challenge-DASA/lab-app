@@ -6,22 +6,22 @@ import com.dasa.challenge.labapp.application.usecases.cart.CartUseCase;
 import com.dasa.challenge.labapp.application.views.auth.RfidAuthView;
 import com.dasa.challenge.labapp.application.views.conclusion.ConclusionView;
 import com.dasa.challenge.labapp.infrastructure.components.RfidReaderComponent;
-import com.dasa.challenge.labapp.infrastructure.config.BeanConfig;
 import com.dasa.challenge.labapp.infrastructure.utils.SliderSwitch;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -52,13 +52,18 @@ public class RfidAuthViewImpl implements RfidAuthView {
     private Timeline animationTimeline;
     private final ApiClientUseCase apiClientUseCase;
     private final CartUseCase cartUseCase;
-    private final UUID laboratoryId = UUID.fromString("12345678-1234-5678-1234-123456789012");
+    private final UUID laboratoryId;
 
-    public RfidAuthViewImpl(Stage stage, AuthUseCase authUseCase, ApiClientUseCase apiClientUseCase, CartUseCase cartUseCase) {
+    public RfidAuthViewImpl(Stage stage,
+                            AuthUseCase authUseCase,
+                            ApiClientUseCase apiClientUseCase,
+                            CartUseCase cartUseCase,
+                            UUID laboratoryId) {
         this.stage = stage;
         this.authUseCase = authUseCase;
         this.apiClientUseCase = apiClientUseCase;
         this.cartUseCase = cartUseCase;
+        this.laboratoryId = laboratoryId;
     }
 
     @Override
@@ -121,19 +126,39 @@ public class RfidAuthViewImpl implements RfidAuthView {
 
     private void initializeRfidReader() {
         authUseCase.authHandler(rfidToken -> {
-            handleCardRead(rfidToken);
+            if (!this.cartUseCase.getAll().isEmpty()) {
+                handleCardRead(rfidToken);
+                boolean allSucceeded = true;
 
-            cartUseCase.getAll().forEach(procedure -> {
-                System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
+                for (var procedure : cartUseCase.getAll()) {
+                    System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
+                    try {
+                        apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
+                        System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
+                    } catch (Exception e) {
+                        allSucceeded = false;
+                        System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
+                        Platform.runLater(() ->
+                                showError("Falha para resgatar itens do procedimento '" + procedure.getName() + "': " + e.getMessage())
+                        );
+                    }
 
-                try {
-                    apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
-                    System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
-                } catch (Exception e) {
-                    System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
-
+                    this.cartUseCase.remove(UUID.fromString(procedure.getId()));
                 }
-            });
+
+                if (allSucceeded) {
+                    Platform.runLater(() ->
+                            showSuccess("Todos os itens de procedimentos foram requisitados para retirada.")
+                    );
+                } else {
+                    javafx.application.Platform.runLater(() ->
+                            showSuccess("Alguns itens de procedimentos foram requisitados para retirada.")
+                    );
+                }
+
+
+                this.nextPage();
+            }
         });
 
         authUseCase.validateAuth();
@@ -173,5 +198,23 @@ public class RfidAuthViewImpl implements RfidAuthView {
 
     public void setConclusionView(ConclusionView conclusionView) {
         this.conclusionView = conclusionView;
+    }
+
+    private void showError(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erro");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.initOwner(stage);
+        alert.showAndWait();
+    }
+
+    private void showSuccess(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Sucesso");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.initOwner(stage);
+        alert.showAndWait();
     }
 }

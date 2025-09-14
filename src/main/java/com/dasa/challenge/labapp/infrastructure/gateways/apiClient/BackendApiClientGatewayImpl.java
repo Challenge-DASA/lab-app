@@ -22,9 +22,7 @@ public class BackendApiClientGatewayImpl implements ApiClientGateway {
     @Override
     public ArrayList<Procedure> getLabProcedures(UUID laboratoryId) {
         ProcedureResponseDTO procedureResponse = apiClient.getLabProcedures(laboratoryId);
-        System.out.println("Got this procedures from api: " + procedureResponse);
         ArrayList<Procedure> procedures = mountProcedures(procedureResponse);
-        System.out.println("Mounted procedures: " + procedures);
         return procedures;
     }
 
@@ -41,18 +39,15 @@ public class BackendApiClientGatewayImpl implements ApiClientGateway {
     }
 
     private ArrayList<Procedure> mountProcedures(ProcedureResponseDTO proceduresDataFromAPI) {
-        System.out.println("Start mount procedures to UI");
         ArrayList<Procedure> proceduresData = new ArrayList<>();
 
         proceduresDataFromAPI.procedures().forEach(procedure -> {
-            System.out.println("Mounting procedure: " + procedure);
             Procedure procedureData =
                     new Procedure(procedure.id().toString(),
                             procedure.name(),
                             procedure.description(),
                             mountProcedureItems(procedure.id()));
 
-            System.out.println("Procedure mounted: " + procedureData);
             proceduresData.add(procedureData);
         });
 
@@ -60,20 +55,17 @@ public class BackendApiClientGatewayImpl implements ApiClientGateway {
     }
 
     private ArrayList<ProcedureItem> mountProcedureItems(UUID procedureId) {
-        System.out.println("Mounting items/materials for procedureId: " + procedureId);
         MaterialsResponseDTO procedureMaterialsItems = apiClient.getProcedureMaterials(procedureId);
 
         ArrayList<ProcedureItem> items = new ArrayList<>();
 
         procedureMaterialsItems.materials().forEach(material -> {
-            System.out.println("Mounting material/item: " + material);
             ProcedureItem procedureItem = new ProcedureItem(
                     material.name(),
                     material.requiredAmount(),
                     material.id().toString()
             );
 
-            System.out.println("Material/item mounted: " + procedureItem);
             items.add(procedureItem);
         });
 

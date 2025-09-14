@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -41,14 +42,19 @@ public class ConfirmProcedureViewImpl implements ConfirmProcedureView {
     private List<Procedure> allProcedures = new ArrayList<>();
     private final List<ProcedureComponent> procedureComponents = new ArrayList<>();
     private final CartUseCase cartUseCase;
-    private final UUID laboratoryId = UUID.fromString("12345678-1234-5678-1234-123456789012");
+    private final UUID laboratoryId;
     private final RfidAuthView rfidAuthView;
 
-    public ConfirmProcedureViewImpl(Stage stage, ApiClientUseCase apiClientUseCase, CartUseCase cartUseCase, RfidAuthView rfidAuthView) {
+    public ConfirmProcedureViewImpl(Stage stage,
+                                    ApiClientUseCase apiClientUseCase,
+                                    CartUseCase cartUseCase,
+                                    RfidAuthView rfidAuthView,
+                                    UUID laboratoryId) {
         this.stage = stage;
         this.apiClientUseCase = apiClientUseCase;
         this.cartUseCase = cartUseCase;
         this.rfidAuthView = rfidAuthView;
+        this.laboratoryId = laboratoryId;
     }
 
     @Override
@@ -203,14 +209,7 @@ public class ConfirmProcedureViewImpl implements ConfirmProcedureView {
         alert.setTitle("Error");
         alert.setHeaderText(null);
         alert.setContentText(message);
-        alert.showAndWait();
-    }
-
-    private void showSuccess(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
+        alert.initOwner(stage);
         alert.showAndWait();
     }
 

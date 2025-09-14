@@ -14,6 +14,7 @@ import com.dasa.challenge.labapp.application.views.conclusion.ConclusionView;
 import com.dasa.challenge.labapp.application.views.confirmProcedure.ConfirmProcedureView;
 import com.dasa.challenge.labapp.application.views.home.HomeView;
 import com.dasa.challenge.labapp.infrastructure.gateways.apiClient.BackendApiClientGatewayImpl;
+import com.dasa.challenge.labapp.infrastructure.gateways.apiClient.MockedApiClientGatewayImpl;
 import com.dasa.challenge.labapp.infrastructure.gateways.auth.RfidAuthGatewayImpl;
 import com.dasa.challenge.labapp.infrastructure.gateways.cart.LocalCartGatewayImpl;
 import com.dasa.challenge.labapp.infrastructure.outbound.api.ApiClient;
@@ -22,14 +23,23 @@ import com.dasa.challenge.labapp.infrastructure.views.confirmProcedure.ConfirmPr
 import com.dasa.challenge.labapp.infrastructure.views.home.HomeViewImpl;
 import com.dasa.challenge.labapp.infrastructure.views.rfidAuth.RfidAuthViewImpl;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import java.util.UUID;
 
 @Configuration
+@PropertySource("classpath:application.properties")
 public class BeanConfig {
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 
     @Bean
     @Scope("singleton")
@@ -40,14 +50,19 @@ public class BeanConfig {
     }
 
     @Bean
-    public ApiClient apiClient() {
-        return new ApiClient();
+    public ApiClient apiClient(@Value("${api.apiUrl}") String baseUrl) {
+        return new ApiClient(baseUrl);
     }
 
     @Bean
-    public ApiClientGateway apiClientGateway(ApiClient apiClient) {
-        // new MockedApiClientGatewayImpl(); // MockedApi
-        return new BackendApiClientGatewayImpl(apiClient);
+    public ApiClientGateway apiClientGateway(ApiClient apiClient, @Value("${api.useMockedApi}") String useMockedApi) {
+        if (Boolean.parseBoolean(useMockedApi)) {
+            System.out.println("Using Mocked API Client");
+            return new MockedApiClientGatewayImpl(); // MockedApi
+        } else {
+            System.out.println("Using Real API Client");
+            return new BackendApiClientGatewayImpl(apiClient);
+        }
     }
 
     @Bean
@@ -76,16 +91,21 @@ public class BeanConfig {
     }
 
     @Bean
-    public RfidAuthView rfidAuthView(Stage stage, AuthUseCase authUseCase, ApiClientUseCase apiClientUseCase, CartUseCase cartUseCase) {
-        return new RfidAuthViewImpl(stage, authUseCase, apiClientUseCase, cartUseCase);
+    public RfidAuthView rfidAuthView(Stage stage,
+                                     AuthUseCase authUseCase,
+                                     ApiClientUseCase apiClientUseCase,
+                                     CartUseCase cartUseCase,
+                                     @Value("${api.mockedLaboratoryId}") String laboratoryId) {
+        return new RfidAuthViewImpl(stage, authUseCase, apiClientUseCase, cartUseCase, UUID.fromString(laboratoryId));
     }
 
     @Bean
     public ConfirmProcedureView confirmProcedureView(Stage stage,
                                                      ApiClientUseCase apiClientUseCase,
                                                      CartUseCase cartUseCase,
-                                                     RfidAuthView rfidAuthView) {
-        return new ConfirmProcedureViewImpl(stage, apiClientUseCase, cartUseCase, rfidAuthView);
+                                                     RfidAuthView rfidAuthView,
+                                                     @Value("${api.mockedLaboratoryId}") String laboratoryId) {
+        return new ConfirmProcedureViewImpl(stage, apiClientUseCase, cartUseCase, rfidAuthView, UUID.fromString(laboratoryId));
     }
 
     @Bean

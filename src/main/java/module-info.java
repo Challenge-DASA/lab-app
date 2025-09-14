@@ -1,13 +1,13 @@
 module com.dasa.challenge.labapp {
-    requires javafx.controls;
     requires javafx.fxml;
     requires spring.context;
     requires spring.core;
     requires spring.beans;
-    requires java.net.http;
     requires com.fasterxml.jackson.datatype.jsr310;
     requires com.fasterxml.jackson.databind;
     requires java.smartcardio;
+    requires java.net.http;
+    requires javafx.controls;
 
 
     opens com.dasa.challenge.labapp.infrastructure.views.home to javafx.fxml, spring.core;

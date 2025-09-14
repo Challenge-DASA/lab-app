@@ -17,11 +17,12 @@ import java.util.UUID;
 public class ApiClient {
 
     private final HttpClient httpClient;
-    private final String baseUrl = "http://localhost:5000"; // make this get from the application.yml later
+    private final String baseUrl;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public ApiClient() {
+    public ApiClient(String baseUrl) {
         this.httpClient = HttpClient.newHttpClient();
+        this.baseUrl = baseUrl;
         System.out.println("[API] ApiClient initialized with baseUrl: " + baseUrl);
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
         objectMapper.registerModule(new JavaTimeModule());
@@ -76,11 +77,11 @@ public class ApiClient {
 
     public WithdrawResponseDTO sendWithdrawnItems(UUID laboratoryId, UUID procedureId, UUID rfidToken) {
         try {
-            System.out.println("[API] Starting send Withdrawn Items... With rfidToken: " + rfidToken);
+            System.out.println("[API] Starting send Withdrawn Items... ");
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(baseUrl + "/laboratory/" + laboratoryId + "/withdraw/" + procedureId))
                     .header("Authorization", rfidToken.toString())
-                    .POST(null)
+                    .POST(HttpRequest.BodyPublishers.noBody())
                     .build();
 
             HttpResponse<String> response = sendRequest(request);
@@ -88,14 +89,18 @@ public class ApiClient {
             System.out.println("[API] Withdraw response status code: " + response.statusCode() +
                     " Response body: " + response.body());
 
+            if (response.statusCode() == 400) {
+                throw new RuntimeException("Erro ao retirar materiais devido à falta de estoque: "
+                        + response.body());
+            }
             if (response.statusCode() != 200) {
-                throw new RuntimeException("Status returned when tried to Withdraw Procedure Items: "
-                        + response.statusCode() + " - Message: " + response.body());
+                throw new RuntimeException("Erro ao retirar materiais: "
+                        + response.statusCode() + " - " + response.body());
             }
 
             return objectMapper.readValue(response.body(), WithdrawResponseDTO.class);
         } catch (Exception e) {
-            throw new RuntimeException("Error while trying to Withdraw Procedure Items: ", e);
+            throw new RuntimeException("Falha de comunicação com API: " + e.getMessage(), e);
         }
     }
 

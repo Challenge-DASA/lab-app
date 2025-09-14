@@ -1,0 +1,83 @@
+package com.dasa.challenge.labapp.infrastructure.views.conclusion;
+
+import com.dasa.challenge.labapp.application.views.conclusion.ConclusionView;
+import com.dasa.challenge.labapp.application.views.home.HomeView;
+import com.dasa.challenge.labapp.infrastructure.utils.SliderSwitch;
+import com.dasa.challenge.labapp.infrastructure.views.home.HomeViewImpl;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
+
+public class ConclusionViewImpl implements ConclusionView {
+
+    @FXML
+    private Label welcomeText;
+
+    @FXML
+    private Button startWithdrawButton;
+
+    private final Stage stage;
+
+    private HomeView homeView;
+
+    public ConclusionViewImpl(Stage stage) {
+        this.stage = stage;
+    }
+
+    @Override
+    public Parent start() {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    HomeViewImpl.class.getResource(
+                            "/com/dasa/challenge/labapp/views/conclusion/conclusion.fxml"));
+            loader.setController(this);
+            Parent root = loader.load();
+
+            if (stage.getScene() == null) {
+                StackPane rootContainer = new StackPane(root);
+                Scene scene = new Scene(rootContainer, 800, 600);
+                scene.getStylesheets().add(Objects.requireNonNull(
+                                getClass().getResource("/com/dasa/challenge/labapp/styles/conclusion/conclusion.css"))
+                        .toExternalForm());
+
+                stage.setTitle("SmartLab Inventory");
+                stage.setScene(scene);
+                stage.show();
+            }
+
+            return root;
+
+        } catch (IOException ex) {
+            throw new RuntimeException("Failed to load conclusion view", ex);
+        }
+    }
+
+    @Override
+    public void nextPage() {
+        SliderSwitch.slideTo(
+                this.stage,
+                () -> {
+                    Parent newView = homeView.start();
+                    stage.getScene().setRoot(newView);
+                },
+                "/com/dasa/challenge/labapp/styles/home/home.css"
+        );
+    }
+
+    @FXML
+    private void initialize() {
+        startWithdrawButton.setOnAction(event -> nextPage());
+    }
+
+    public void setHomeView(HomeView homeView) {
+        this.homeView = homeView;
+    }
+}

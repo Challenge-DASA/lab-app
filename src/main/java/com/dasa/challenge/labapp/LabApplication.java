@@ -1,6 +1,6 @@
 package com.dasa.challenge.labapp;
 
-import com.dasa.challenge.labapp.application.usecases.home.HomePageUseCase;
+import com.dasa.challenge.labapp.application.views.home.HomeView;
 import com.dasa.challenge.labapp.infrastructure.config.BeanConfig;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class LabApplication extends Application {
 
-    private final HomePageUseCase homePageUseCase;
+    private final HomeView homeView;
     private static ApplicationContext applicationContext;
 
     public LabApplication() {
@@ -18,7 +18,7 @@ public class LabApplication extends Application {
             applicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
         }
 
-        this.homePageUseCase = applicationContext.getBean(HomePageUseCase.class);
+        this.homeView = applicationContext.getBean(HomeView.class);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class LabApplication extends Application {
         System.out.println("Starting Lab Application...");
 
         stage.setTitle("SmartLab Inventory");
-        this.homePageUseCase.start();
+        this.homeView.start();
     }
 
 

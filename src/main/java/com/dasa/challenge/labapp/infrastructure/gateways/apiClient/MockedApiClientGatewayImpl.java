@@ -14,7 +14,7 @@ import java.util.UUID;
 public class MockedApiClientGatewayImpl implements ApiClientGateway {
 
     @Override
-    public ArrayList<Procedure> getProcedures() {
+    public ArrayList<Procedure> getLabProcedures(UUID laboratoryId) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode json = mapper.readTree(new File(Objects.requireNonNull
@@ -44,24 +44,6 @@ public class MockedApiClientGatewayImpl implements ApiClientGateway {
         }
     }
 
-    @Override
-    public UUID authenticateUser(String userId, String userPassword) {
-        if (userId.isEmpty() || userPassword.isEmpty()) {
-            return null;
-        }
-
-        return UUID.randomUUID();
-    }
-
-    @Override
-    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ProcedureItem> items) {
-        if (withdrawProtocol == null || items == null || items.isEmpty()) {
-            return null;
-        }
-
-        return withdrawProtocol;
-    }
-
     private ArrayList<ProcedureItem> getProcedureItems(JsonNode procedure) {
         ArrayList<ProcedureItem> items = new ArrayList<>();
 
@@ -76,5 +58,13 @@ public class MockedApiClientGatewayImpl implements ApiClientGateway {
                 });
 
         return items;
+    }
+
+    @Override
+    public UUID withdrawMaterialsForProcedure(UUID laboratoryId, UUID procedureId, UUID rfidToken) {
+        System.out.println("Mocked withdrawMaterialsForProcedure called with laboratoryId: " + laboratoryId
+                + " and procedureId: " + procedureId + " and rfidToken: " + rfidToken);
+        System.out.println("Withdraw successful, returning mock protocol UUID.");
+        return UUID.randomUUID();
     }
 }

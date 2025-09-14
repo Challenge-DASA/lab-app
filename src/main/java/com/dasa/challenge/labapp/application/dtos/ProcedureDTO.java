@@ -1,10 +1,12 @@
 package com.dasa.challenge.labapp.application.dtos;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
-public record ProcedureDTO(UUID procedureId,
-                           String procedureName,
-                           String procedureDescription,
-                           ArrayList<ItemDTO> procedureItems) {
-}
+public record ProcedureDTO(
+        LocalDateTime createdAt,
+        String description,
+        UUID id,
+        String name,
+        LocalDateTime updatedAt
+) {}

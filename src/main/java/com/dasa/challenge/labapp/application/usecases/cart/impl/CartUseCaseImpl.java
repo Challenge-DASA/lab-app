@@ -1,8 +1,9 @@
 package com.dasa.challenge.labapp.application.usecases.cart.impl;
 
-import com.dasa.challenge.labapp.application.gateways.proceduresCart.CartGateway;
+import com.dasa.challenge.labapp.application.gateways.cart.CartGateway;
 import com.dasa.challenge.labapp.application.usecases.cart.CartUseCase;
 import com.dasa.challenge.labapp.domain.entities.Procedure;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -33,5 +34,10 @@ public class CartUseCaseImpl implements CartUseCase {
     @Override
     public Procedure get(UUID procedureId) {
         return this.cartGateway.get(procedureId);
+    }
+
+    @Override
+    public ObservableList<Procedure> watchCart() {
+        return this.cartGateway.watchCart();
     }
 }

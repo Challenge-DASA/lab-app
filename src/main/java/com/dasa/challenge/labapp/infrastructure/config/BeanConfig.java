@@ -1,25 +1,32 @@
 package com.dasa.challenge.labapp.infrastructure.config;
 
 import com.dasa.challenge.labapp.application.gateways.apiClient.ApiClientGateway;
-import com.dasa.challenge.labapp.application.gateways.confirmProcedure.ConfirmProcedureGateway;
-import com.dasa.challenge.labapp.application.gateways.home.HomeGateway;
-import com.dasa.challenge.labapp.application.gateways.proceduresCart.CartGateway;
+import com.dasa.challenge.labapp.application.gateways.auth.AuthGateway;
+import com.dasa.challenge.labapp.application.gateways.cart.CartGateway;
 import com.dasa.challenge.labapp.application.usecases.apiClient.ApiClientUseCase;
 import com.dasa.challenge.labapp.application.usecases.apiClient.impl.ApiClientUseCaseImpl;
+import com.dasa.challenge.labapp.application.usecases.auth.AuthUseCase;
+import com.dasa.challenge.labapp.application.usecases.auth.impl.RfidAuthUseCaseImpl;
 import com.dasa.challenge.labapp.application.usecases.cart.CartUseCase;
 import com.dasa.challenge.labapp.application.usecases.cart.impl.CartUseCaseImpl;
-import com.dasa.challenge.labapp.application.usecases.confirmProcedure.ConfirmProcedureUseCase;
-import com.dasa.challenge.labapp.application.usecases.confirmProcedure.impl.ConfirmProcedureUseCaseImpl;
-import com.dasa.challenge.labapp.application.usecases.home.HomePageUseCase;
-import com.dasa.challenge.labapp.application.usecases.home.impl.HomePageUseCaseImpl;
-import com.dasa.challenge.labapp.infrastructure.gateways.apiClient.MockedApiClientGatewayImpl;
+import com.dasa.challenge.labapp.application.views.auth.RfidAuthView;
+import com.dasa.challenge.labapp.application.views.conclusion.ConclusionView;
+import com.dasa.challenge.labapp.application.views.confirmProcedure.ConfirmProcedureView;
+import com.dasa.challenge.labapp.application.views.home.HomeView;
+import com.dasa.challenge.labapp.infrastructure.gateways.apiClient.BackendApiClientGatewayImpl;
+import com.dasa.challenge.labapp.infrastructure.gateways.auth.RfidAuthGatewayImpl;
 import com.dasa.challenge.labapp.infrastructure.gateways.cart.LocalCartGatewayImpl;
-import com.dasa.challenge.labapp.infrastructure.gateways.confirmProcedure.ConfirmProcedureGatewayImpl;
-import com.dasa.challenge.labapp.infrastructure.gateways.home.HomeGatewayImpl;
+import com.dasa.challenge.labapp.infrastructure.outbound.api.ApiClient;
+import com.dasa.challenge.labapp.infrastructure.views.conclusion.ConclusionViewImpl;
+import com.dasa.challenge.labapp.infrastructure.views.confirmProcedure.ConfirmProcedureViewImpl;
+import com.dasa.challenge.labapp.infrastructure.views.home.HomeViewImpl;
+import com.dasa.challenge.labapp.infrastructure.views.rfidAuth.RfidAuthViewImpl;
 import javafx.stage.Stage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+
+import java.util.UUID;
 
 @Configuration
 public class BeanConfig {
@@ -33,8 +40,14 @@ public class BeanConfig {
     }
 
     @Bean
-    public ApiClientGateway apiClientGateway() {
-        return new MockedApiClientGatewayImpl();
+    public ApiClient apiClient() {
+        return new ApiClient();
+    }
+
+    @Bean
+    public ApiClientGateway apiClientGateway(ApiClient apiClient) {
+        // new MockedApiClientGatewayImpl(); // MockedApi
+        return new BackendApiClientGatewayImpl(apiClient);
     }
 
     @Bean
@@ -43,13 +56,13 @@ public class BeanConfig {
     }
 
     @Bean
-    public ConfirmProcedureUseCase confirmProcedureUseCase(ConfirmProcedureGateway confirmProcedureGateway) {
-        return new ConfirmProcedureUseCaseImpl(confirmProcedureGateway);
+    public AuthGateway authGateway() {
+        return new RfidAuthGatewayImpl();
     }
 
     @Bean
-    public ConfirmProcedureGateway confirmProcedureGateway(Stage stage, ApiClientGateway apiClientGateway, CartGateway cartGateway) {
-        return new ConfirmProcedureGatewayImpl(stage, apiClientGateway, cartGateway);
+    public AuthUseCase authUseCase(AuthGateway authGateway) {
+        return new RfidAuthUseCaseImpl(authGateway);
     }
 
     @Bean
@@ -63,13 +76,38 @@ public class BeanConfig {
     }
 
     @Bean
-    public HomeGateway homeGateway(Stage stage, ConfirmProcedureGateway confirmProcedureGateway) {
-        return new HomeGatewayImpl(stage, confirmProcedureGateway);
+    public RfidAuthView rfidAuthView(Stage stage, AuthUseCase authUseCase, ApiClientUseCase apiClientUseCase, CartUseCase cartUseCase) {
+        return new RfidAuthViewImpl(stage, authUseCase, apiClientUseCase, cartUseCase);
     }
 
     @Bean
-    public HomePageUseCase homePageUseCase(HomeGateway homeGateway,
-                                           Stage stage) {
-        return new HomePageUseCaseImpl(homeGateway, stage);
+    public ConfirmProcedureView confirmProcedureView(Stage stage,
+                                                     ApiClientUseCase apiClientUseCase,
+                                                     CartUseCase cartUseCase,
+                                                     RfidAuthView rfidAuthView) {
+        return new ConfirmProcedureViewImpl(stage, apiClientUseCase, cartUseCase, rfidAuthView);
+    }
+
+    @Bean
+    public HomeView homeView(Stage stage, ConfirmProcedureView confirmProcedureView) {
+        return new HomeViewImpl(stage, confirmProcedureView);
+    }
+
+    @Bean
+    public ConclusionView conclusionView(Stage stage) {
+        // A dependência HomeView será injetada manualmente.
+        return new ConclusionViewImpl(stage);
+    }
+
+    @Bean
+    public Object resolveCircularDependencies(
+            RfidAuthView rfidAuthView,
+            ConclusionView conclusionView,
+            HomeView homeView) {
+        // Este método garante que todos os beans acima sejam criados primeiro.
+        // E então, resolve as dependências circulares via setters.
+        ((RfidAuthViewImpl) rfidAuthView).setConclusionView(conclusionView);
+        ((ConclusionViewImpl) conclusionView).setHomeView(homeView);
+        return null;
     }
 }

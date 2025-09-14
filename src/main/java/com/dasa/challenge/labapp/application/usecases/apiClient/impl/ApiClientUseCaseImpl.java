@@ -3,7 +3,6 @@ package com.dasa.challenge.labapp.application.usecases.apiClient.impl;
 import com.dasa.challenge.labapp.application.gateways.apiClient.ApiClientGateway;
 import com.dasa.challenge.labapp.application.usecases.apiClient.ApiClientUseCase;
 import com.dasa.challenge.labapp.domain.entities.Procedure;
-import com.dasa.challenge.labapp.domain.entities.ProcedureItem;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -17,18 +16,12 @@ public class ApiClientUseCaseImpl implements ApiClientUseCase {
     }
 
     @Override
-    public ArrayList<Procedure> getProcedures() {
-        return this.apiClientGateway.getProcedures();
+    public ArrayList<Procedure> getProcedures(UUID laboratoryId) {
+        return apiClientGateway.getLabProcedures(laboratoryId);
     }
 
     @Override
-    public UUID authenticateUser(String userId, String userPassword) {
-        return this.apiClientGateway.authenticateUser(userId, userPassword);
+    public UUID sendWithdrawnItems(UUID laboratoryId, UUID procedureId, UUID rfidToken) {
+        return apiClientGateway.withdrawMaterialsForProcedure(laboratoryId, procedureId, rfidToken);
     }
-
-    @Override
-    public UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ProcedureItem> items) {
-        return this.apiClientGateway.sendWithdrawnItems(withdrawProtocol, items);
-    }
-
 }

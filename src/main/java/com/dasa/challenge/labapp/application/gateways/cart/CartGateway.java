@@ -1,4 +1,4 @@
-package com.dasa.challenge.labapp.application.usecases.cart;
+package com.dasa.challenge.labapp.application.gateways.cart;
 
 import com.dasa.challenge.labapp.domain.entities.Procedure;
 import javafx.collections.ObservableList;
@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public interface CartUseCase {
+public interface CartGateway {
 
     void add(Procedure procedure);
 

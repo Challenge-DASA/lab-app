@@ -59,9 +59,10 @@ public class Procedure {
                 description.substring(0, maxLength - 3) + "..." : description;
     }
 
-    public String getFormattedItems() {
-        return items.stream()
+    public String getFormattedItems(int maxLength) {
+        String formattedItems = items.stream()
                 .map(item -> String.format("%sx%s", item.getName(), item.getQuantity()))
                 .collect(java.util.stream.Collectors.joining(", "));
+        return formattedItems.length() > maxLength ? formattedItems.substring(0, maxLength - 3) + "..." : formattedItems;
     }
 }

@@ -7,9 +7,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public interface ApiClientUseCase {
-    ArrayList<Procedure> getProcedures();
+    ArrayList<Procedure> getProcedures(UUID laboratoryId);
 
-    UUID authenticateUser(String userId, String userPassword);
-
-    UUID sendWithdrawnItems(UUID withdrawProtocol, ArrayList<ProcedureItem> items);
+    UUID sendWithdrawnItems(UUID laboratoryId, UUID procedureId, UUID rfidToken);
 }

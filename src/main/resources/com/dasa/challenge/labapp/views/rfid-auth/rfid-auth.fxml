@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import com.dasa.challenge.labapp.infrastructure.components.RfidReaderComponent?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      styleClass="rfidAuthMain"
+      alignment="CENTER"
+      spacing="30"
+      fx:id="mainContainer">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <!-- Title -->
+    <Label fx:id="titleLabel"
+           styleClass="authTitle"
+           text="Autenticação Necessária"/>
+
+    <!-- RFID Reader Icon/Animation -->
+    <RfidReaderComponent fx:id="rfidReaderIcon"/>
+
+    <!-- Instruction Text -->
+    <Label fx:id="instructionLabel"
+           styleClass="instructionText"
+           text="Aproxime seu cartão do leitor RFID"
+           wrapText="true"/>
+
+    <!-- Status Text -->
+    <Label fx:id="statusLabel"
+           styleClass="statusText"
+           text="Aguardando cartão..."/>
+
+</VBox>

@@ -1,6 +1,6 @@
 package com.dasa.challenge.labapp.infrastructure.gateways.cart;
 
-import com.dasa.challenge.labapp.application.gateways.proceduresCart.CartGateway;
+import com.dasa.challenge.labapp.application.gateways.cart.CartGateway;
 import com.dasa.challenge.labapp.domain.entities.Procedure;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -64,9 +64,9 @@ public class ProcedureComponent extends VBox {
 
     public void updateView() {
         if (procedure != null) {
-            procedureTitle.setText(procedure.getDisplayName(30));
-            procedureDescription.setText(procedure.getDisplayDescription(40));
-            procedureItems.setText(procedure.getFormattedItems());
+            procedureTitle.setText(procedure.getDisplayName(25));
+            procedureDescription.setText(procedure.getDisplayDescription(60));
+            procedureItems.setText(procedure.getFormattedItems(60));
 
             updateSelectionState();
         }

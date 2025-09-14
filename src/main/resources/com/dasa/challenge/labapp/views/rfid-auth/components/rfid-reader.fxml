@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Arc?>
+
+<fx:root type="StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         styleClass="rfidReaderComponent"
+         fx:id="iconContainer"
+         prefWidth="200"
+         prefHeight="200">
+
+    <!-- Card Icon -->
+    <Rectangle fx:id="cardIcon"
+               width="80"
+               height="50"
+               arcWidth="10"
+               arcHeight="10"
+               styleClass="cardIcon"/>
+
+    <!-- Status Indicator -->
+    <Circle fx:id="statusCircle"
+            radius="8"
+            translateX="30"
+            translateY="-20"
+            styleClass="statusCircle"/>
+
+    <!-- Radio Waves -->
+    <Arc fx:id="waveArc1"
+         radiusX="60"
+         radiusY="60"
+         startAngle="45"
+         length="90"
+         type="OPEN"
+         fill="TRANSPARENT"
+         styleClass="waveArc"/>
+
+    <Arc fx:id="waveArc2"
+         radiusX="80"
+         radiusY="80"
+         startAngle="45"
+         length="90"
+         type="OPEN"
+         fill="TRANSPARENT"
+         styleClass="waveArc"/>
+
+    <Arc fx:id="waveArc3"
+         radiusX="100"
+         radiusY="100"
+         startAngle="45"
+         length="90"
+         type="OPEN"
+         fill="TRANSPARENT"
+         styleClass="waveArc"/>
+
+</fx:root>

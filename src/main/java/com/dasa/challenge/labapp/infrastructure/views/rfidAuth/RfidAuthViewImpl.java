@@ -128,15 +128,12 @@ public class RfidAuthViewImpl implements RfidAuthView {
         authUseCase.authHandler(rfidToken -> {
             if (!this.cartUseCase.getAll().isEmpty()) {
                 handleCardRead(rfidToken);
-                boolean allSucceeded = true;
-
                 for (var procedure : cartUseCase.getAll()) {
                     System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
                     try {
                         apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
                         System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
                     } catch (Exception e) {
-                        allSucceeded = false;
                         System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
                         Platform.runLater(() ->
                                 showError("Falha para resgatar itens do procedimento '" + procedure.getName() + "': " + e.getMessage())
@@ -145,17 +142,6 @@ public class RfidAuthViewImpl implements RfidAuthView {
 
                     this.cartUseCase.remove(UUID.fromString(procedure.getId()));
                 }
-
-                if (allSucceeded) {
-                    Platform.runLater(() ->
-                            showSuccess("Todos os itens de procedimentos foram requisitados para retirada.")
-                    );
-                } else {
-                    javafx.application.Platform.runLater(() ->
-                            showSuccess("Alguns itens de procedimentos foram requisitados para retirada.")
-                    );
-                }
-
 
                 this.nextPage();
             }
@@ -209,12 +195,4 @@ public class RfidAuthViewImpl implements RfidAuthView {
         alert.showAndWait();
     }
 
-    private void showSuccess(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Sucesso");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.initOwner(stage);
-        alert.showAndWait();
-    }
 }

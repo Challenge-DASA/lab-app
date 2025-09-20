@@ -125,29 +125,34 @@ public class RfidAuthViewImpl implements RfidAuthView {
     }
 
     private void initializeRfidReader() {
-        authUseCase.authHandler(rfidToken -> {
-            if (!this.cartUseCase.getAll().isEmpty()) {
-                handleCardRead(rfidToken);
-                for (var procedure : cartUseCase.getAll()) {
-                    System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
-                    try {
-                        apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
-                        System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
-                    } catch (Exception e) {
-                        System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
-                        Platform.runLater(() ->
-                                showError("Falha para resgatar itens do procedimento '" + procedure.getName() + "': " + e.getMessage())
-                        );
+        try {
+            authUseCase.authHandler(rfidToken -> {
+                if (!this.cartUseCase.getAll().isEmpty()) {
+                    handleCardRead(rfidToken);
+                    for (var procedure : cartUseCase.getAll()) {
+                        System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
+                        try {
+                            apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
+                            System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
+                        } catch (Exception e) {
+                            System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
+                            Platform.runLater(() ->
+                                    showError("Falha para resgatar itens do procedimento '" + procedure.getName() + "': " + e.getMessage())
+                            );
+                        }
+
+                        this.cartUseCase.remove(UUID.fromString(procedure.getId()));
                     }
 
-                    this.cartUseCase.remove(UUID.fromString(procedure.getId()));
+                    this.nextPage();
                 }
+            });
 
-                this.nextPage();
-            }
-        });
-
-        authUseCase.validateAuth();
+            authUseCase.validateAuth();
+        } catch (RuntimeException e) {
+            showError("Erro ao ler o cartão, verifique o leitor e o cartão usado: " + e.getMessage());
+            authUseCase.validateAuth();
+        }
     }
 
     private void startWaitingAnimation() {

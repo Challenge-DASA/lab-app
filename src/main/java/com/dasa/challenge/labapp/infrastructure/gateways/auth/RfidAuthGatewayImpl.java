@@ -60,7 +60,7 @@ public class RfidAuthGatewayImpl implements AuthGateway {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                throw new RuntimeException(e);
+//                throw new RuntimeException(e);
             }
         }).start();
     }

@@ -30,9 +30,11 @@ public class BackendApiClientGatewayImpl implements ApiClientGateway {
     public UUID withdrawMaterialsForProcedure(UUID laboratoryId, UUID procedureId, UUID rfidToken) {
         WithdrawResponseDTO withdrawResponse = apiClient.sendWithdrawnItems(laboratoryId, procedureId, rfidToken);
         if (withdrawResponse.status().equalsIgnoreCase("AUTHORIZED")) {
+            System.out.println("AUTHORIZED status found. Id: " + withdrawResponse);
             return withdrawResponse.transaction_id();
         }
 
+        System.out.println("No 'AUTHORIZED' status found. Status: " + withdrawResponse.status());
         throw new RuntimeException("Error while trying to withdraw materials: "
                 + withdrawResponse.status()
                 + " - Id: " + withdrawResponse.transaction_id());

@@ -18,4 +18,5 @@ public interface CartUseCase {
 
     ObservableList<Procedure> watchCart();
 
+    void clear();
 }

@@ -128,11 +128,14 @@ public class RfidAuthViewImpl implements RfidAuthView {
         authUseCase.authHandler(rfidToken -> {
             if (!this.cartUseCase.getAll().isEmpty()) {
                 handleCardRead(rfidToken);
+                System.out.println("Items in the cart BEFORE the requests: " + this.cartUseCase.getAll().size());
+
                 for (var procedure : cartUseCase.getAll()) {
                     System.out.println("Asking for procedure withdraw: " + procedure.getName() + " (ID: " + procedure.getId() + ")");
                     try {
                         apiClientUseCase.sendWithdrawnItems(laboratoryId, UUID.fromString(procedure.getId()), rfidToken);
                         System.out.println("Procedure " + procedure.getName() + " withdrawn successfully.");
+//                        this.cartUseCase.remove(UUID.fromString(procedure.getId()));
                     } catch (Exception e) {
                         System.err.println("Failed to withdraw procedure '" + procedure.getName() + "': " + e.getMessage());
                         Platform.runLater(() ->
@@ -140,9 +143,11 @@ public class RfidAuthViewImpl implements RfidAuthView {
                         );
                     }
 
-                    this.cartUseCase.remove(UUID.fromString(procedure.getId()));
                 }
 
+                this.cartUseCase.clear();
+
+                System.out.println("Items in the cart after the requests: " + this.cartUseCase.getAll().size());
                 this.nextPage();
             }
         });

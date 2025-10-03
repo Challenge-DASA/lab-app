@@ -1,25 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/* ========== IMPORTAÇÃO DE FONTES ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* ========== ROOT E CONFIGURAÇÕES GLOBAIS ========== */
 .root {
-    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-family: "Poppins", "Segoe UI", "Arial", sans-serif;
     -fx-font-smoothing-type: gray;
-    background-color: #C0E6DE;
+    -fx-background-color: #3498db;
 }
 
+/* ========== CONTAINER PRINCIPAL ========== */
+.rootContainer {
+    -fx-background-color: #3498db;
+}
+
+/* ========== ELEMENTOS DECORATIVOS ========== */
+.backgroundPattern {
+    -fx-opacity: 0.1;
+}
+
+.decorativeCircle1 {
+    -fx-fill: #2980b9;
+    -fx-opacity: 0.3;
+    -fx-translate-x: -200;
+    -fx-translate-y: -150;
+}
+
+.decorativeCircle2 {
+    -fx-fill: #5dade2;
+    -fx-opacity: 0.2;
+    -fx-translate-x: 180;
+    -fx-translate-y: -80;
+}
+
+.decorativeCircle3 {
+    -fx-fill: #1abc9c;
+    -fx-opacity: 0.15;
+    -fx-translate-x: -150;
+    -fx-translate-y: 120;
+}
+
+/* ========== CARD PRINCIPAL ========== */
+.mainCard {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0.3, 0, 5);
+}
+
+/* ========== TEXTOS ========== */
+.brandTitle {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 36;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.brandSubtitle {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 13;
+    -fx-font-weight: normal;
+    -fx-text-fill: #7f8c8d;
+}
+
+.welcomeText {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.descriptionText {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+    -fx-text-fill: #7f8c8d;
+}
+
+.footerText {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 11;
+    -fx-font-weight: normal;
+    -fx-text-fill: #bdc3c7;
+}
+
+/* ========== BOTÕES (ESTILO ÚNICO) ========== */
 .button {
-    -fx-background-color: #3450D8;
-    -fx-text-fill: #C0E6DE;
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 16;
     -fx-font-weight: bold;
-    -fx-font-size: 16px;
+    -fx-background-radius: 25;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 8, 0.3, 0, 3);
+    -fx-padding: 15 30 15 30;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
 
-.titleClass {
-    -fx-font-size: 24px;
-    -fx-text-fill: #3450D8;
-    -fx-font-weight: bold;
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-translate-y: -3;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
 }
 
-.homeMain {
-    -fx-background-color: #C0E6DE;
+.button:pressed {
+    -fx-background-color: #21618c;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.2), 4, 0.2, 0, 1);
+    -fx-translate-y: 0;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:focused {
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }

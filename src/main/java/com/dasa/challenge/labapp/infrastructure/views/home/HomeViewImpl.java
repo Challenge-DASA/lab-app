@@ -1,6 +1,5 @@
 package com.dasa.challenge.labapp.infrastructure.views.home;
 
-
 import com.dasa.challenge.labapp.application.views.confirmProcedure.ConfirmProcedureView;
 import com.dasa.challenge.labapp.application.views.home.HomeView;
 import com.dasa.challenge.labapp.infrastructure.utils.SliderSwitch;
@@ -23,6 +22,9 @@ public class HomeViewImpl implements HomeView {
 
     @FXML
     private Button startWithdrawButton;
+
+    @FXML
+    private Button closeButton;
 
     private final Stage stage;
 
@@ -73,8 +75,14 @@ public class HomeViewImpl implements HomeView {
         );
     }
 
+    private void closeApplication() {
+        stage.close();
+        System.exit(0);
+    }
+
     @FXML
     private void initialize() {
         startWithdrawButton.setOnAction(event -> nextPage());
+        closeButton.setOnAction(event -> closeApplication());
     }
 }

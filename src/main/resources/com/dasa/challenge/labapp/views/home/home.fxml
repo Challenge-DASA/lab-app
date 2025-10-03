@@ -3,15 +3,51 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Circle?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="20.0" styleClass="homeMain">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<StackPane xmlns:fx="http://javafx.com/fxml" styleClass="rootContainer">
 
-    <Label fx:id="welcomeText" text="Olá, seja bem-vindo ao SmartLab Inventory!" textAlignment="CENTER"
-           styleClass="titleClass"/>
-    <Button text="Iniciar Solicitação" alignment="CENTER" fx:id="startWithdrawButton"/>
-</VBox>
+    <VBox styleClass="backgroundPattern" alignment="CENTER">
+        <Circle radius="150" styleClass="decorativeCircle1"/>
+        <Region prefHeight="50"/>
+        <Circle radius="100" styleClass="decorativeCircle2"/>
+        <Region prefHeight="80"/>
+        <Circle radius="75" styleClass="decorativeCircle3"/>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="40" styleClass="mainCard" maxWidth="450" minHeight="550">
+        <padding>
+            <Insets bottom="50" left="50" right="50" top="50"/>
+        </padding>
+
+        <VBox alignment="CENTER" spacing="15">
+            <VBox alignment="CENTER" spacing="8">
+                <Label text="SmartLab" styleClass="brandTitle"/>
+                <Label text="Inventory System" styleClass="brandSubtitle"/>
+            </VBox>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="8">
+            <Label fx:id="welcomeText" text="Olá! Seja bem-vindo"
+                   styleClass="welcomeText" textAlignment="CENTER"/>
+            <Label text="Gerencie seu laboratório com inteligência"
+                   styleClass="descriptionText" textAlignment="CENTER"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="15">
+            <Button fx:id="startWithdrawButton" text="🚀 Iniciar Solicitação"
+                    styleClass="button" prefWidth="280" prefHeight="55"/>
+            <Button text="📋 Ver Histórico"
+                    styleClass="button" prefWidth="280" prefHeight="45"/>
+            <Button fx:id="closeButton" text="Sair" styleClass="button"
+                    prefWidth="280" prefHeight="35"/>
+        </VBox>
+
+        <Label text="v2.0"
+               styleClass="footerText"/>
+    </VBox>
+
+</StackPane>

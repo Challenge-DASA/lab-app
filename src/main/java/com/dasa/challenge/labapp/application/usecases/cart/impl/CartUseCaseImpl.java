@@ -40,4 +40,9 @@ public class CartUseCaseImpl implements CartUseCase {
     public ObservableList<Procedure> watchCart() {
         return this.cartGateway.watchCart();
     }
+
+    @Override
+    public void clear() {
+        this.cartGateway.clear();
+    }
 }

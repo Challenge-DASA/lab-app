@@ -1,217 +1,396 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/* ========== IMPORTAÇÃO DE FONTES ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* ========== ROOT E CONFIGURAÇÕES GLOBAIS ========== */
 .root {
-    -fx-font-family: 'Nunito', sans-serif;
+    -fx-font-family: "Poppins", "Segoe UI", "Arial", sans-serif;
     -fx-font-smoothing-type: gray;
-    background-color: #C0E6DE;
-    -fx-background-color: #C0E6DE;
+    -fx-background-color: #3498db;
 }
 
-.confirmProcedureMain {
-    -fx-background-color: #C0E6DE;
-    background-color: #C0E6DE;
+/* ========== CONTAINER PRINCIPAL ========== */
+.rootContainer {
+    -fx-background-color: #3498db;
 }
 
-.confirmProcedureTitle {
-    -fx-font-size: 24px;
-    -fx-text-fill: #3450D8;
-    -fx-font-weight: bold;
-}
-
-.fieldSearchBar {
-    -fx-border-color: #3450D8;
-    -fx-background-color: NONE;
-    -fx-border-radius: 16px;
-    -fx-max-width: 128px;
-
-}
-
-.labelSearchBar {
-    -fx-text-fill: #8080A7;
-    -fx-font-weight: bold;
-}
-
-.confirmProcedureHeader {
-    -fx-padding: 0 0 12px 0;
-}
-
-.proceduresScrollPane {
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-background: transparent;
+.mainContainer {
     -fx-background-color: transparent;
 }
 
-.proceduresContainer {
-    -fx-border-radius: 16px;
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-background-color: #C0E6DE;
+/* ========== ELEMENTOS DECORATIVOS ========== */
+.backgroundPattern {
+    -fx-opacity: 0.1;
 }
 
-.procedureContainer.unselected {
-    -fx-background-color: white;
-    -fx-text-fill: #3450D8;
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-padding: 12px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
-    -fx-min-width: 240px;
-    -fx-max-width: 240px;
-    -fx-min-height: 180px;
-    -fx-max-height: 180px;
-
-}
-.procedureContainer.selected {
-    -fx-background-color: #3450D8;
-    -fx-text-fill: white;
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-padding: 12px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 4, 0, 0, 2);
-    -fx-min-width: 240px;
-    -fx-max-width: 240px;
-    -fx-min-height: 180px;
-    -fx-max-height: 180px;
-
+.decorativeCircle1 {
+    -fx-fill: #2980b9;
+    -fx-opacity: 0.3;
+    -fx-translate-x: -200;
+    -fx-translate-y: -150;
 }
 
+.decorativeCircle2 {
+    -fx-fill: #5dade2;
+    -fx-opacity: 0.2;
+    -fx-translate-x: 180;
+    -fx-translate-y: -80;
+}
+
+.decorativeCircle3 {
+    -fx-fill: #1abc9c;
+    -fx-opacity: 0.15;
+    -fx-translate-x: -150;
+    -fx-translate-y: 120;
+}
+
+/* ========== CARD PRINCIPAL DA PÁGINA ========== */
+.mainCard {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0.3, 0, 5);
+}
+
+/* ========== TÍTULOS E TEXTOS DA PÁGINA ========== */
+.mainTitle {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 36;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.subtitle {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 16;
+    -fx-font-weight: normal;
+    -fx-text-fill: #7f8c8d;
+}
+
+.sectionTitle {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.resultsCount {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
+    -fx-text-fill: #95a5a6;
+}
+
+/* ========== CAMPO DE PESQUISA ========== */
+.searchField {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #2c3e50;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 16;
+    -fx-font-weight: normal;
+    -fx-background-radius: 25;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 2;
+    -fx-border-radius: 25;
+    -fx-padding: 15 25 15 25;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-pref-height: 50;
+    -fx-pref-width: 500;
+}
+
+.searchField:focused {
+    -fx-border-color: #3498db;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.2), 8, 0.3, 0, 3);
+}
+
+/* ========== CONTAINER DO CARD DE PROCEDIMENTO ========== */
+.procedureContainer {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 15, 0.4, 0, 5);
+    -fx-border-color: #d1d9e6;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-padding: 20;
+    -fx-cursor: hand;
+    -fx-spacing: 15;
+    -fx-max-width: 300;
+    -fx-max-height: 280;
+    -fx-pref-width: 300;
+    -fx-pref-height: 280;
+}
 
 .procedureContainer:hover {
-    -fx-cursor: hand;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 0, 0, 4);
-    -fx-scale-x: 1.02;
-    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.35), 20, 0.5, 0, 8);
+    -fx-border-color: #3498db;
+    -fx-border-width: 3;
+    -fx-translate-y: -5;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
 }
 
+.procedureContainer.selected {
+    -fx-background-color: #3498db;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.6), 25, 0.6, 0, 10);
+}
+
+.procedureContainer.selected .procedureTitle,
+.procedureContainer.selected .procedureItems,
+.procedureContainer.selected .procedureDescription {
+    -fx-text-fill: white;
+}
+
+/* ========== HEADER DO PROCEDIMENTO ========== */
 .procedureHeader {
-    -fx-pref-height: 30px;
-    -fx-min-width: 200px;
-    -fx-max-width: 200px;
-}
-
-.procedureBody {
-    -fx-min-width: 200px;
-    -fx-max-width: 200px;
-    -fx-min-height: 140px;
-    -fx-max-height: 140px;
-    -fx-padding: 8 12 8 0;
     -fx-background-color: transparent;
-    -fx-spacing: 8px;
+    -fx-spacing: 8;
 }
 
 .procedureTitle {
-    -fx-font-size: 14px;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 18;
     -fx-font-weight: bold;
-    -fx-text-fill: #3450D8;
-    -fx-background-color: NONE;
+    -fx-text-fill: #2c3e50;
     -fx-wrap-text: true;
-    -fx-max-width: 200px;
-    -fx-padding: 0 0 4px 0;
 }
 
-.procedureItems, .procedureDescription {
-    -fx-font-size: 12px;
-    -fx-wrap-text: true;
-    -fx-max-width: 200px;
+/* ========== BODY DO PROCEDIMENTO ========== */
+.procedureBody {
+    -fx-background-color: transparent;
+    -fx-spacing: 12;
 }
 
 .procedureItems {
-    -fx-text-fill: #555;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 13;
+    -fx-font-weight: normal;
+    -fx-text-fill: #5a6c7d;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 2;
 }
 
 .procedureDescription {
-    -fx-text-fill: #777;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 12;
+    -fx-font-weight: normal;
+    -fx-text-fill: #7f8c8d;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 1;
 }
 
+/* ========== BOTÃO DO PROCEDIMENTO ========== */
 .procedureButton {
-    -fx-alignment: center;
-    -fx-padding: 6 12;
-    -fx-background-radius: 8;
-    -fx-background-color: #3450D8;
+    -fx-background-color: #3498db;
     -fx-text-fill: white;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 13;
     -fx-font-weight: bold;
+    -fx-background-radius: 20;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 8, 0.3, 0, 3);
+    -fx-padding: 10 20 10 20;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-pref-width: 160;
 }
 
-.confirmProcedureMain {
-    -fx-background-color: #E8F5F5;
+.procedureButton:hover {
+    -fx-background-color: #2980b9;
+    -fx-translate-y: -2;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
 }
 
-.confirmProcedureTitle {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #3450D8;
+.procedureButton:pressed {
+    -fx-background-color: #21618c;
+    -fx-translate-y: 0;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
 }
 
+.procedureContainer.selected .procedureButton {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.4), 8, 0.3, 0, 3);
+}
+
+.procedureContainer.selected .procedureButton:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #2980b9;
+}
+
+/* ========== SCROLLPANES ========== */
 .proceduresScrollPane {
     -fx-background-color: transparent;
-    -fx-border-color: transparent;
+    -fx-background: transparent;
 }
 
-.proceduresContainer {
-    -fx-padding: 10;
+.proceduresScrollPane .viewport {
+    -fx-background-color: transparent;
 }
 
-.selectedProceduresBar {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, -3);
-    -fx-border-color: #E0E0E0;
-    -fx-border-width: 1 0 0 0;
-}
-
-.selectedCountLabel {
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #3450D8;
-    -fx-min-width: 120;
+.proceduresScrollPane .content {
+    -fx-background-color: transparent;
 }
 
 .selectedProceduresScrollPane {
-    -fx-background-color: transparent;
-    -fx-border-color: transparent;
-    -fx-max-height: 40;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 15;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+    -fx-padding: 5;
 }
 
-.selectedProceduresScrollPane .scroll-bar:horizontal {
-    -fx-pref-height: 8;
+/* ========== CONTAINERS ========== */
+.proceduresContainer {
+    -fx-background-color: transparent;
 }
 
 .selectedProceduresContainer {
     -fx-background-color: transparent;
 }
 
-.selected-procedure-item {
-    -fx-background-color: #F0F4FF;
-    -fx-padding: 5 10;
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
+/* ========== BARRA DE PROCEDIMENTOS SELECIONADOS ========== */
+.selectedProceduresBar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 2 0 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0.3, 0, -5);
 }
 
-.selected-procedure-name {
-    -fx-font-size: 12px;
-    -fx-text-fill: #3450D8;
-}
-
-.continueButton {
-    -fx-background-color: white;
-    -fx-text-fill: #3450D8;
+.selectedCountLabel {
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 16;
     -fx-font-weight: bold;
-    -fx-padding: 10 30;
+    -fx-text-fill: #3498db;
+}
+
+/* ========== CHIPS DE SELECIONADOS ========== */
+.selectedChip {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.2), 4, 0.2, 0, 1);
+}
+
+.selectedChip:hover {
+    -fx-background-color: #e74c3c;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.3), 6, 0.3, 0, 2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ========== BOTÃO DE VOLTAR ========== */
+.backButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #95a5a6;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 14;
+    -fx-font-weight: normal;
     -fx-background-radius: 20;
     -fx-cursor: hand;
-    -fx-min-width: 120;
-    -fx-border-color: #3450D8;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
     -fx-border-radius: 20;
+    -fx-padding: 10 20 10 20;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
 }
 
-.continueButton:hover {
-    -fx-background-color: #3450D8;
+.backButton:hover {
+    -fx-background-color: #3498db;
     -fx-text-fill: white;
-
+    -fx-border-color: #3498db;
+    -fx-translate-y: -2;
 }
 
-.continueButton:disabled {
-    -fx-background-color: #CCCCCC;
+.backButton:pressed {
+    -fx-background-color: #d5dbdb;
+    -fx-translate-y: 0;
+}
+
+/* ========== BOTÕES PRINCIPAIS ========== */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-family: "Poppins", sans-serif;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 8, 0.3, 0, 3);
+    -fx-padding: 15 30 15 30;
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-translate-y: -3;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.button:pressed {
+    -fx-background-color: #21618c;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.2), 4, 0.2, 0, 1);
+    -fx-translate-y: 0;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.button:focused {
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.button:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-text-fill: #7f8c8d;
+    -fx-effect: none;
     -fx-cursor: default;
+}
+
+.button:disabled:hover {
+    -fx-background-color: #bdc3c7;
+    -fx-translate-y: 0;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+/* ========== SCROLLBAR PERSONALIZADA ========== */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8;
+    -fx-pref-height: 8;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #2980b9;
 }

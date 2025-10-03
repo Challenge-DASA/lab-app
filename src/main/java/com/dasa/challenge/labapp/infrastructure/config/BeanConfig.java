@@ -123,11 +123,12 @@ public class BeanConfig {
     public Object resolveCircularDependencies(
             RfidAuthView rfidAuthView,
             ConclusionView conclusionView,
-            HomeView homeView) {
-        // Este método garante que todos os beans acima sejam criados primeiro.
-        // E então, resolve as dependências circulares via setters.
+            HomeView homeView,
+            ConfirmProcedureView confirmProcedureView) {
+
         ((RfidAuthViewImpl) rfidAuthView).setConclusionView(conclusionView);
         ((ConclusionViewImpl) conclusionView).setHomeView(homeView);
+        ((ConfirmProcedureViewImpl) confirmProcedureView).setHomeView(homeView);
         return null;
     }
 }

@@ -18,4 +18,5 @@ public interface CartGateway {
 
     ObservableList<Procedure> watchCart();
 
+    void clear();
 }

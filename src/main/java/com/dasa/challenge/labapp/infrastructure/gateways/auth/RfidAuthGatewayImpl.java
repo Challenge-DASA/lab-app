@@ -25,7 +25,7 @@ public class RfidAuthGatewayImpl implements AuthGateway {
     }
 
     private void startListening() {
-        new Thread(() -> {
+        Thread thread = new Thread(() -> {
             try {
                 TerminalFactory factory = TerminalFactory.getDefault();
                 List<CardTerminal> terminals = factory.terminals().list();
@@ -38,7 +38,7 @@ public class RfidAuthGatewayImpl implements AuthGateway {
                 CardTerminal terminal = terminals.get(0);
                 System.out.println("Using reader: " + terminal.getName());
 
-                while (true) {
+
                     terminal.waitForCardPresent(0); // bloqueia até cartão ser apresentado
                     Card card = terminal.connect("*");
 
@@ -57,12 +57,13 @@ public class RfidAuthGatewayImpl implements AuthGateway {
                         card.disconnect(false);
                         terminal.waitForCardAbsent(0); // espera o cartão ser removido
                     }
-                }
             } catch (Exception e) {
                 e.printStackTrace();
 //                throw new RuntimeException(e);
             }
-        }).start();
+        });
+
+        thread.start();
     }
 
     private byte[] tryGetUid(Card card) throws Exception {

@@ -44,7 +44,6 @@ public class LocalCartGatewayImpl implements CartGateway {
         return procedure.orElse(null);
     }
 
-    @Override
     public void clear() {
         this.cart.clear();
     }

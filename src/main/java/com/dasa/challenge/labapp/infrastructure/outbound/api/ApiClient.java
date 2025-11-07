@@ -3,6 +3,7 @@ package com.dasa.challenge.labapp.infrastructure.outbound.api;
 import com.dasa.challenge.labapp.application.dtos.MaterialsResponseDTO;
 import com.dasa.challenge.labapp.application.dtos.ProcedureResponseDTO;
 import com.dasa.challenge.labapp.application.dtos.WithdrawResponseDTO;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -30,6 +31,7 @@ public class ApiClient {
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE);
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
     public ProcedureResponseDTO getLabProcedures(UUID laboratoryId) {

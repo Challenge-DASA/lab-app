@@ -9,8 +9,10 @@ module com.dasa.challenge.labapp {
     requires java.net.http;
     requires javafx.controls;
 
+    exports com.dasa.challenge.labapp.infrastructure.utils to com.fasterxml.jackson.databind;
 
     opens com.dasa.challenge.labapp.infrastructure.views.home to javafx.fxml, spring.core;
+    opens com.dasa.challenge.labapp.infrastructure.utils to javafx.fxml, spring.core;
     opens com.dasa.challenge.labapp.infrastructure.views.confirmProcedure to javafx.fxml, spring.core;
     opens com.dasa.challenge.labapp.infrastructure.views.rfidAuth to javafx.fxml, spring.core;
     opens com.dasa.challenge.labapp.infrastructure.views.conclusion to javafx.fxml, spring.core;
